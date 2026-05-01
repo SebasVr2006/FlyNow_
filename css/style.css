@@ -1,4 +1,63 @@
 body{
     width: 100%;
     height: 100%;
+    background-color: rgb(152, 209, 209);
+    color: rgb(1, 1, 141);
 }
+
+header{
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    height: 6vh;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2% ;
+}
+
+h1{
+    margin-left: 4%;
+}
+
+.icono{
+    fill: rgb(1, 1, 141);
+    width: 2em;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 150%;
+    gap: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(1, 1, 141);
+}
+
+.activo{
+    background-color: gray;
+    color: white;
+}
+
