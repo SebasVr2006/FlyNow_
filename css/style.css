@@ -3,6 +3,7 @@ body{
     height: 100%;
     background-color: rgb(152, 209, 209);
     color: rgb(1, 1, 141);
+    margin: 0;
 }
 
 header{
@@ -42,7 +43,7 @@ h1{
     margin-right: 5%;
 }
 
-ul{
+.option{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,3 +62,68 @@ a{
     color: white;
 }
 
+.extra{
+    padding-top: 0.5%;
+    background-color: white;
+    width: 95%;
+    height: 15vh;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    font-size: 120%;
+    line-height: 110%;
+
+}
+
+.fly{
+    margin-right: 8%;
+    font-size: 140%;
+    text-decoration: underline;
+    margin-bottom: 1px;
+}
+
+.redes{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    line-height: 2%;
+    width: 50%;
+    font-size: 140%;
+}
+
+.encabredes{
+    height: 1vh;
+    margin-bottom: 1px;
+}
+
+.redesbox{
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    fill: rgb(1, 1, 141);
+}
+
+.iconored{
+    width: 15%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    padding-top: 10px;
+    margin-left: 3%;
+}
