@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/Login/styles.css">
-    <title>FlyNow - Login</title>
+    <link rel="stylesheet" href="../../css/DetalleDeVuelo/DetalleDeVuelo.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -20,35 +20,125 @@
         </div>
         <nav class="menu">
             <ul class="option">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Vuelos/vuelos.html">Vuelos</a></li>
-                <li><a href="../Ofertas/ofertas.html">Ofertas</a></li>
-                <li><a href="../Contacto/Index.html">Contacto</a></li>
-                <li><a href="../Perfil/info.html">Perfil</a></li>
-                <li class="activo"><a href="../Login/login.html"><img src="../../assets/Iconos/cuenta.svg"></a>
+                <li class="activo"><a href="./index.html">Inicio</a></li>
+                <li><a href="./Vuelos/vuelos.html">Vuelos</a></li>
+                <li><a href="./Ofertas/ofertas.html">Ofertas</a></li>
+                <li><a href="./Contacto/Index.html">Contacto</a></li>
+                <li><a href="./Perfil/info.html">Perfil</a></li>
+                <li><a href="./Login/login.html"><img src="../assets/Iconos/cuentaB.svg" alt=""></a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form class="login-form" action="../index.html" method="post">
-            <label for="E-Mail">E-Mail</label>
-            <input id="E-Mail" type="email" name="E-Mail" placeholder="E-Mail">
-            <label for="contrasena">Contraseña</label>
-            <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña">
-            <div class="botones">
-                <a href="../index.html"><button class="boton">Aceptar</button></a>
-                <button class="boton" type="reset">Cancelar</button>
+        <h2>Detalle de Vuelo / Selecciona tu Asiento</h2>
+        <section class="conteiner">
+
+            <div class="DetalleDeVuelo">
+                <h3>Detalle de Vuelo</h3>
+                <div class="section">
+                    <div class="ruta">Ida: Buenos Aires (BUE) → Madrid (MAD)</div>
+
+                    <div class="timeline">
+                        <span>12:00</span>
+
+                        <div class="line">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                        </div>
+
+                        <span>08:40</span>
+                    </div>
+
+                    <div class="extra">
+                        2 escalas - Lima (LIM) <br>
+                        Duración: 15h
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="ruta">Vuelta: Madrid (MAD) → Buenos Aires (BUE)</div>
+
+                    <div class="timeline">
+                        <span>18:30</span>
+
+                        <div class="line">
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                        </div>
+
+                        <span>06:40</span>
+                    </div>
+
+                    <div class="extra">
+                        2 escalas - Lima (LIM)
+                    </div>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span class="precio">$850 USD</span>
+                </div>
             </div>
-        </form>
-        <div class="registro-container">
-            <p>No tiene una cuenta. <a href="./registrarse.html">Registrate.</a></p>
-        </div>
-        <div class="recuperar-Link">
-            <p>Olvidó su contraseña. <a href="./recuperar.html">Recuperar.</a></p>
-        </div>
+            <div class="conteiner-asientos">
+                <div class="asientos-titulo">
+                    <h3>Selecciona tu Asiento</h3>
+                </div>
+                <div class="estado-asientos">
+                    <div class="ejemplo">
+                        <div class="caja-asiento Disponible"></div>
+                        <h4>Disponible</h4>
+                    </div>
+
+                    <div class="ejemplo">
+                        <div class="caja-asiento Ocupado"></div>
+                        <h4>ocupado</h4>
+                    </div>
+                </div>
+                <div class="Asientos">
+                    <div class="lugares">
+                        <div class="vacio"><a href="../../assets/Iconos/asiento avion.svg" class="asiento-icono"></a></div>
+                        <div class="vacio"><a href="../../assets/Iconos/asiento avion.svg"></a></div>
+                        <div class="vacio"></div>
+                        <div class="vacio"></div>
+                        <div class="vacio"></div>
+                        <div class="lleno"></div>
+                        <div class="ocupado"></div>
+                        <div class="lleno"></div>
+                        <div class="ocupado"></div>
+                        <div class="ocupado"></div>
+                        <div class="vacio"></div>
+                        <div class="vacio"></div>
+                        <div class="lleno"></div>
+                        <div class="vacio"></div>
+                        <div class="lleno"></div>
+                        <div class="lleno"></div>
+                    </div>
+                    <div class="lugares">
+                        <div class="lugares">
+                            <div class="vacio"></div>
+                            <div class="vacio"></div>
+                            <div class="vacio"></div>
+                            <div class="vacio"></div>
+                            <div class="vacio"></div>
+                            <div class="lleno"></div>
+                            <div class="ocupado"></div>
+                            <div class="lleno"></div>
+                            <div class="ocupado"></div>
+                            <div class="ocupado"></div>
+                            <div class="vacio"></div>
+                            <div class="vacio"></div>
+                            <div class="lleno"></div>
+                            <div class="vacio"></div>
+                            <div class="lleno"></div>
+                            <div class="lleno"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <footer class="extra">
         <div class="info">
             <h3 class="fly">FlyNow:</h3>
@@ -79,6 +169,7 @@
 
         </div>
     </footer>
+
 </body>
 
 </html>

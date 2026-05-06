@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/Ofertas/ofertas.css">
-    <title>FlyNow - Ofertas</title>
+    <link rel="stylesheet" href="../../css/Vuelos/vuelosProvincias.css">
+    <title>FlyNow</title>
 </head>
 
 <body>
@@ -21,8 +21,8 @@
         <nav class="menu">
             <ul class="option">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Vuelos/vuelos.html">Vuelos</a></li>
-                <li class="activo"><a href="../Ofertas/ofertas.html">Ofertas</a></li>
+                <li class="activo"><a href="../Vuelos/vuelos.html">Vuelos</a></li>
+                <li><a href="../Ofertas/ofertas.html">Ofertas</a></li>
                 <li><a href="../Contacto/Index.html">Contacto</a></li>
                 <li><a href="../Perfil/info.html">Perfil</a></li>
                 <li><a href="../Login/login.html"><img src="../../assets/Iconos/cuentaB.svg" alt=""></a>
@@ -32,8 +32,9 @@
     </header>
 
     <main>
-        <section class="container">
+        <section class="conteiner">
             <div class="filtros">
+
                 <div class="subt">
                     <h2>Filtrar por:</h2>
                 </div>
@@ -58,134 +59,146 @@
                     <label for="aero"><input type="checkbox">FlyBondi</label>
                     <label for="aero"><input type="checkbox">JetSMART</label>
                 </div>
-            </div>
 
-            <div class="ofertas">
-                <h2>Ofertas imperdibles</h2>
-                <div class="cards-ofertas">
-
-                    <!-- oferta vuelos -->
-
-                    <a href="#">
-                        <div class="info-card">
-                            <img class="img-ofertas" src="../../assets/images/Paises/Río-de-janeiro-brasil.webp"
-                                alt="Rio De Janeiro - Brasil">
-                            <div class="info-lugar">
-                                <h3>Vuelo a Rio De Janeiro</h3>
-                                <p>Desde Buenos Aires</p>
-                                <p>Ida y Vuelta</p>
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio ida y vuelta desde</p>
-                                <p class="precio">$496.000</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="info-card">
-                            <img class="img-ofertas" src="../../assets/images/Provincias Argentina/Santa Cruz.jpg"
-                                alt="El Calafate Santa Cruz">
-                            <div class="info-lugar">
-                                <h3>Vuelo a El Calafate</h3>
-                                <p>Desde Buenos Aires</p>
-                                <p>Ida y Vuelta</p>
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio ida y vuelta desde</p>
-                                <p class="precio">$171.000</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="info-card">
-                            <img class="img-ofertas" src="../../assets/images/Provincias Argentina/Tierra del Fuego.jpg"
-                                alt="Ushuaia">
-                            <div class="info-lugar">
-                                <h3>Vuelo a Ushuaia</h3>
-                                <p>Desde Buenos Aires</p>
-                                <p>Ida y Vuelta</p>
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio ida y vuelta desde</p>
-                                <p class="precio">$210.000</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- ofertas paquetes -->
-
-                    <a href="#">
-                        <div class="info-card-paquete">
-                            <img class="img-ofertas" src="../../assets/images/Provincias Argentina/traful neuquen.webp"
-                                alt="Traful - Neuquen">
-                            <div class="info-lugar-paquete">
-                                <p class="p-dias"><span class="dias">5 Dias / 4 Noches</span></p>
-                                <h3>Paquete a Traful</h3>
-                                <h3>Neuquen</h3>
-                                <p class="text-vuelodirecto">Vuelo Directo </p>
-                                <p>Desde Buenos Aires a Bariloche</p>
-                                <p class="fecha">Desde <strong> Lu 22 Jun</strong> hasta <Strong> Vie 26 Jun</Strong></p>
-                                <p>Traslado incluido</p>
-                                <p class="Hotel">Hotel Alto Traful</p>
-
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio por persona desde</p>
-                                <p class="precio">$812.000</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="info-card-paquete">
-                            <img class="img-ofertas" src="../../assets/images/Provincias Argentina/salinas-grandes.webp"
-                                alt="Salinas Grandes - Salta">
-                            <div class="info-lugar-paquete">
-                                <p class="p-dias"><span class="dias">5 Dias / 4 Noches</span></p>
-                                <h3>Paquete a Salinas Grandes</h3>
-                                <h3>Salta</h3>
-                                <p>Vuelo Directo</p>
-                                <p>Desde Buenos Aires a Salta</p>
-                                <p class="fecha">Desde <Strong>Ma 02 Jul</Strong> hasta <Strong>Do 11 Jul</Strong></p>
-                                <p>Traslado incluido</p>
-                                <p>Excursiones incluidas</p>
-                                <p class="hotel">Hotel Urquiza Suites</p>
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio por persona desde</p>
-                                <p class="precio">$768.000</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="info-card-paquete">
-                            <img class="img-ofertas" src="../../assets/images/Provincias Argentina/puerto iguazu.webp"
-                                alt="Puerto iguazu - Misiones">
-                            <div class="info-lugar-paquete">
-                                <p class="p-dias"><span class="dias">6 Dias / 5 Noches</span></p>
-                                <h3>Paquete a Puerto Iguazu</h3>
-                                <h3>Misiones</h3>
-                                <p>Vuelo Directo</p>
-                                <p>Desde Buenos Aires a Misiones</p>
-                                <p class="fecha">Desde <Strong>Do 09 Ago</Strong> hasta <Strong>Vi 14 Ago</Strong></p>
-                                <p>Traslado incluido</p>
-                                <p class="hotel">Hotel Saint George</p>
-                            </div>
-                            <div class="info-precio">
-                                <p class="text-idavuelta">Precio por persona desde</p>
-                                <p class="precio">$440.000</p>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
+            <div class="info-titulo">
+                <h2>Viaja a toda la Argentina </h2>
+                <div class="vuelo-provincias">
+
+                    <a href="">
+                        <div class="info-vuelo">
+
+                            <img class="img-provincia" src="../../assets/images/Provincias Argentina/Cordoba.jpg"
+                                alt="Cordoba">
+                            <div class="info-card">
+                                <h4>Cordoba</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$71.000</span></p>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/rosario_santa_fe.jpg" alt="Rosario"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Santa Fe</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$71.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Entre Rios.jpg" alt="Entre Rios"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Entre Rios</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$88.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Mendoza.jpg" alt="Mendoza"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Mendoza</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$102.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Tucuman.jpg"
+                                    alt="San Miguel de Tucuman" class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Tucuman</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$105.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Neuquen.jpg" alt="Neuquen"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Neuquen</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$118.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/formosa.jpg" alt="Formosa"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Formosa</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo"><span>$160.000</span></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Santa Cruz.jpg" alt="Santa Cruz"
+                                    class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Santa Cruz</h4>
+                                <p class="porPersona">Vuelo por persona</p>
+                                <p class="preciovuelo">$218.000</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="info-vuelo">
+                            <div>
+                                <img src="../../assets/images/Provincias Argentina/Tierra del Fuego.jpg"
+                                    alt="Tierra del Fuego" class="img-provincia">
+                            </div>
+                            <div class="info-card">
+                                <h4>Tierra del Fuego</h4>
+                                <p class="porPersona tierradelfuego">Vuelo por persona</p>
+                                <p class="preciovuelo">$248.000</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+
         </section>
     </main>
-
-        <footer class="extra">
+    <footer class="extra">
         <div class="info">
             <h3 class="fly">FlyNow:</h3>
             <ul>

@@ -1,0 +1,138 @@
+main {
+    min-height: 80vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    align-content: flex-start;
+}
+
+.barra_perfil {
+    margin: 20px;
+    grid-column: 1/2;
+    border-right: 0.5px solid gray;
+}
+
+.contenido {
+    grid-column: 2/3;
+    padding-right: 1.5rem;
+}
+
+.perfil {
+    margin-left: 20px;
+}
+
+.texto_barra {
+    margin-left: 20px;
+}
+
+summary {
+    padding: 10px;
+    background-color: lightskyblue;
+    border-radius: 8px;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+details {
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.contenido_vuelos {
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.info_vuelos {
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.resaltado {
+    background-color: lightskyblue;
+    border-radius: 8px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.datos_encabezado {
+    background-color: lightblue;
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+}
+
+.datos_usuario ul {
+    padding: 0;
+}
+
+.datos_usuario li {
+    margin: 10px 0;
+}
+
+.datos_usuario strong {
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+}
+
+.datos_usuario span {
+    display: inline-block;
+}
+
+.datos_usuario {
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.tabla_vuelos {
+    border-radius: 8px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla_historial {
+    border: 1px solid gray;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.historial_vuelos th {
+    background-color: lightskyblue;
+}
+
+.tabla_vuelos td {
+    border-bottom: 1px solid gray;
+}
+
+.tabla_vuelos th,
+.tabla_vuelos td {
+    padding: 10px 14px;
+}
+
+.tabla_historial td {
+    margin: 10px;
+}
+
+.historial_vuelos h3 {
+    padding: 20px;
+}
+
+footer {
+    position: static;
+}
+
+header {
+    position: sticky;
+}

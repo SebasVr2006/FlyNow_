@@ -1,0 +1,93 @@
+main {
+    min-height: 120vh;
+}
+
+footer {
+    position: static;
+}
+
+.img-pais {
+    width: 13rem;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.filtros {
+    padding: 1rem;
+}
+
+.filtros .subt,
+.porprecio,
+.tipovuelo,
+.aerolineas {
+    margin: 1rem;
+}
+
+.filtros label {
+    margin: .5rem 0;
+}
+
+.porprecio h4 {
+    margin-bottom: .5rem;
+}
+
+.tipovuelo {
+    display: flex;
+    flex-direction: column;
+}
+
+.aerolineas {
+    display: flex;
+    flex-direction: column;
+}
+
+.destinos {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.titulo-paises>h2 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.imagen {
+    margin: 1.5rem auto;
+    width: fit-content;
+    background-color: lightyellow;
+    border: .1rem solid black;
+    border-radius: 1.6rem;
+}
+
+
+.info-card {
+    text-align: center;
+}
+
+.info-card h4 {
+    margin-top: .4rem;
+    margin-bottom: .6rem;
+}
+
+.info-card p {
+    margin-bottom: .5rem;
+}
+
+.info-card .vuelos-desde {
+    color: rgb(104, 104, 104);
+    font-size: .7rem;
+}
+
+.conteiner-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+}
+
+.info-card span {
+    font-size: 1.8rem;
+    color: black;
+}

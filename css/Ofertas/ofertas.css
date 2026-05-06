@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 90%;
+    min-height: 65vh;
+    height: auto;
+    margin-left: 5%;
+    background-color: bisque;
+    padding-bottom: 1.5rem;
+}
+
+footer {
+    position: static;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.filtros{
+    padding: 1rem;
+}
+
+.filtros .subt, .porprecio, .tipovuelo, .aerolineas{
+    margin: 1rem;
+}
+
+.filtros label{
+    margin: .5rem 0;
+}
+
+.porprecio h4{
+    margin-bottom: .5rem;
+}
+
+.tipovuelo{
+    display: flex;
+    flex-direction: column;
+}
+
+.aerolineas{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-ofertas {
+    width: 20rem;
+    height: 13.5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.ofertas h2{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+
+.cards-ofertas{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-right: 1.5rem;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.info-card{
+    height: auto;
+    background-color: lightyellow;
+    border: .1rem solid black;
+    display: grid;
+    grid-template-rows: auto auto 15%;
+    border-radius: 1rem;
+    padding-bottom: .5rem;
+}
+
+.cards-ofertas a{
+  width: fit-content;
+}
+
+.info-precio{
+    padding-top: .5rem;
+    border-top: .16rem solid black;
+}
+
+.info-precio p{
+    margin-left: 1rem;
+}
+
+.info-precio .text-idavuelta{
+    color: rgb(104, 104, 104);
+    font-size: .8rem;
+}
+
+.info-precio .precio{
+    font-size: 2rem;
+    color: black;
+}
+
+.info-lugar h3{
+    text-align: center;
+    margin: .5rem 0;
+}
+
+.info-lugar p{
+    padding: .5rem;
+    color: rgb(104, 104, 104);
+    font-size: .8rem;
+}
+
+.info-card-paquete{
+    width: 100%;
+    height: 100%;
+    background-color: lightyellow;
+    border: .1rem solid black;
+    display: grid;
+    grid-template-rows: auto 45% 12%;
+    border-radius: 1rem;
+    padding-bottom: .5rem;
+}
+
+.dias{
+    background-color: gray;
+    color: black;
+    padding: .2rem .5rem;
+    border-radius: .7rem;
+}
+
+.info-card-paquete .p-dias{
+    margin: .5rem auto;
+    text-align: center;
+}
+
+.info-card-paquete h3{
+    text-align: center;
+}
+
+.info-lugar-paquete p{
+    color: rgb(104, 104, 104);
+    font-size: .8rem;
+    margin-left: .8rem;
+    margin-bottom: .5rem;
+}
+
+.info-card-paquete .fecha{
+    font-size: 1rem;
+    color: black;
+}
+
