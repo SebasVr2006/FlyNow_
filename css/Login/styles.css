@@ -1,0 +1,32 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 2.5vh;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 30rem;
+    height: 5vh;
+    border-radius: 1vh;
+}
+
+.boton {
+    margin-right: 5rem;
+}
+
+.registro-container {
+    display: flex;
+    justify-content: center;
+}
+
+.recuperar-Link {
+    display: flex;
+    justify-content: center;
+}

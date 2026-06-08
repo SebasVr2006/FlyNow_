@@ -1,0 +1,12 @@
+.titulopol{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.textopol{
+    font-size: 120%;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
