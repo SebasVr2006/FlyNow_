@@ -35,7 +35,7 @@
         <div class="subtitulo">
             <h1>Buscá tu vuelo</h1>
         </div>
-        <form class="busqueda" action="./Vuelos/buscar.html" method="post">
+        <form class="busqueda" id="form-busqueda" action="./Vuelos/buscar.html" method="post">
             <label for="origen">Origen: </label>
             <input id="origen" name="origen" type="text" placeholder="Origen">
             <label for="destino">Destino: </label>
@@ -53,7 +53,7 @@
             </select>
         </form>
         <div class="botones">
-            <a href="pages/Vuelos/buscar.html"><button class="boton">Buscar</button></a>
+            <button class="boton" id="btn-buscar">Buscar</button>
             <button class="boton" type="reset">Cancelar</button>
         </div>
     </main>
@@ -87,7 +87,7 @@
 
         </div>
     </footer>
-
+    <script src="./pages/buscar/buscar.js"></script>
 </body>
 
 </html>
