@@ -38,19 +38,31 @@
         <form class="busqueda" id="form-busqueda" action="./Vuelos/buscar.html" method="post">
             <label for="origen">Origen: </label>
             <input id="origen" name="origen" type="text" placeholder="Origen">
+            <span class="error" id="error-origen">El origen es obligatorio</span>
+
             <label for="destino">Destino: </label>
             <input id="destino" name="destino" type="text" placeholder="Destino">
+            <span class="error" id="error-destino">El destino es obligatorio</span>
+
             <label for="ida">Ida: </label>
             <input type="date" name="ida" id="ida">
+            <span class="error" id="error-ida">La fecha de ida es obligatoria</span>
+
             <label for="vuelta">Vuelta: </label>
             <input type="date" name="vuelta" id="vuelta">
+            <span class="error" id="error-vuelta">La fecha de vuelta es obligatoria</span>
+
             <label for="pasajeros">Pasajeros: </label>
             <input type="number" min="1" id="pasajeros" name="pasajeros" placeholder="Nro. total de pasajeros">
+            <span class="error" id="error-pasajeros">Selecciona la cantidad de pasajeros</span>
+
             <label for="clase">Clase: </label>
+
             <select name="clase" id="clase">
                 <option value="turista">Turista</option>
                 <option value="primera">Primera</option>
             </select>
+            <span class="error" id="error-origen">El origen es obligatorio</span>
         </form>
         <div class="botones">
             <button class="boton" id="btn-buscar">Buscar</button>
