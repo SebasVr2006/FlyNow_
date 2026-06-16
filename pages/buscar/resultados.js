@@ -63,7 +63,13 @@ function mostrarResultados() {
 }
 
 function seleccionarVuelo(vuelo, div) {
-    localStorage.setItem('vueloSeleccionado', JSON.stringify(vuelo))
+
+    localStorage.setItem('vueloOrigen', JSON.stringify(vuelo.origen))
+    localStorage.setItem('vueloDestino', JSON.stringify(vuelo.destino))
+    localStorage.setItem('vueloPrecio', JSON.stringify(vuelo.precio))
+    localStorage.setItem('vueloDuracion', JSON.stringify(vuelo.duracion))
+    localStorage.setItem('vueloSalida', JSON.stringify(vuelo.horario))
+
     console.log('Vuelo registrado: ' + vuelo.origen + ' a ' + vuelo.destino)
 
     div.querySelectorAll('.vue').forEach(v => {
