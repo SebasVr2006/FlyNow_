@@ -5,6 +5,7 @@ main {
 
 footer {
     position: static;
+    bottom: 0;
 }
 
 .img-pais {
