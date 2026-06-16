@@ -1,7 +1,6 @@
 document.querySelector('#form-busqueda').addEventListener('submit', (e) => {
     e.preventDefault();
     if (validarFormulario()) {
-        console.log('Redirigiendo...')
         window.location.href = 'pages/Vuelos/buscar.html'
     }
 });
