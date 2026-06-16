@@ -21,7 +21,7 @@ main {
 
 .vue {
     font-size: 150%;
-    height: 15vh;
+    height: 15.4vh;
     display: flex;
     font-weight: bold;
     justify-content: space-evenly;
@@ -86,10 +86,23 @@ main {
 }
 
 .imagen-aerolinea {
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
 
     img {
         height: 110px;
         width: 110px;
+    }
+}
+
+.titulo-vue {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 30vh;
+    
+    button {
+        align-self: center;
+        width: 15vh;
     }
 }

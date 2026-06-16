@@ -46,7 +46,10 @@ function mostrarResultados() {
                 <div class="imagen-aerolinea">
                     <img src="../../assets/images/Aerolineas/${vuelo.codeAerolinea}.jpg" alt="${vuelo.aerolinea}">
                 </div>
-                <h1>${vuelo.origen} a ${vuelo.destino}</h1>
+                <div class="titulo-vue" >
+                    <h1>${vuelo.origen} a ${vuelo.destino}</h1>
+                    <button>Seleccionar</button>
+                </div>
                 <div>
                     <p>${vuelo.escalas ? 'Con escalas' : 'Sin escalas'}</p>
                     <p>Salida: ${vuelo.horario}</p>
@@ -54,11 +57,24 @@ function mostrarResultados() {
                     <p>Precio: $${vuelo.precio}</p>
                 </div>`;
 
-
+        div.querySelector('button').addEventListener('click', () => { seleccionarVuelo(vuelo, div) })
         container.appendChild(div)
-    })
+    });
+}
+
+function seleccionarVuelo(vuelo, div) {
+    localStorage.setItem('vueloSeleccionado', JSON.stringify(vuelo))
+    console.log('Vuelo registrado: ' + vuelo.origen + ' a ' + vuelo.destino)
+
+    div.querySelectorAll('.vue').forEach(v => {
+        v.classList.remove('seleccionado')
+    });
+
+    div.classList.add('seleccionado');
+    window.location.href = "../Detalle de Vuelo/DetalleDeVuelo.html";
 }
 
 document.querySelectorAll('input[name=tipo], .check-aerolinea').forEach(input => input.addEventListener('change', mostrarResultados));
+
 
 mostrarResultados();

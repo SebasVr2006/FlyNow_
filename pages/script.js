@@ -95,7 +95,7 @@ export const VUELOS = [
         duracion: '30h'
     },
 
-        {
+    {
         id: 9,
         origen: "Buenos Aires",
         destino: "Japón",
@@ -105,5 +105,5 @@ export const VUELOS = [
         escalas: true,
         horario: '07:00',
         duracion: '30h'
-    },
+    }
 ];

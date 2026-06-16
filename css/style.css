@@ -153,3 +153,7 @@ footer {
     border-radius: 10px;
     font-size: 130%;
 }
+
+.seleccionado {
+    background-color: rgba(50, 50, 50, 0.355);
+}
