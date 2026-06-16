@@ -45,75 +45,20 @@
 
             <div class="tipovuelo">
                 <h4>Tipo de vuelo:</h4>
-                <label for="tipo"><input type="radio" name="tipo">Directo</label>
-                <label for="tipo"><input type="radio" name="tipo">Con Escala</label>
+                <label for="tipo"><input type="radio" name="tipo" value="directo">Directo</label>
+                <label for="tipo"><input type="radio" name="tipo" value="escala">Con Escala</label>
             </div>
 
             <div class="aerolineas">
                 <h4>Aerolineas: </h4>
-                <label for="aero"><input type="checkbox">Aerolineas Argentinas</label>
-                <label for="aero"><input type="checkbox">American Airlines</label>
-                <label for="aero"><input type="checkbox">LATAM</label>
-                <label for="aero"><input type="checkbox">FlyBondi</label>
-                <label for="aero"><input type="checkbox">JetSMART</label>
+                <label for="aero"><input type="checkbox" class="check-aerolinea"
+                        value="Aerolineas Argentinas">Aerolineas Argentinas</label>
+                <label for="aero"><input type="checkbox" class="check-aerolinea" value="LATAM">LATAM</label>
+                <label for="aero"><input type="checkbox" class="check-aerolinea" value="FlyBondi">FlyBondi</label>
             </div>
         </section>
 
-        <main class="vuelos">
-            <div class="vue1">
-                <div class="imagen-aerolinea">
-                    <img src="../../assets/images/Aerolineas/AeroArg.jpg" alt="Aerolineas Argentinas">
-                </div>
-                <div class="salida">
-                    <p>12:30 hs</p>
-                    <p>Bs. As.</p>
-                </div>
-                <div class="llegada">
-                    <p>00:30 hs</p>
-                    <p>Madrid</p>
-                </div>
-                <div class="datosvuelo">
-                    <p>Sin escala</p>
-                    <p>12 hs</p>
-                </div>
-            </div>
-
-            <div class="vue2">
-                <div class="imagen-aerolinea">
-                    <img src="../../assets/images/Aerolineas/Latam.jpg" alt="LATAM">
-                </div>
-                <div class="salida">
-                    <p>12:30 hs</p>
-                    <p>Bs. As.</p>
-                </div>
-                <div class="llegada">
-                    <p>00:30 hs</p>
-                    <p>Madrid</p>
-                </div>
-                <div class="datosvuelo">
-                    <p>Sin escala</p>
-                    <p>12 hs</p>
-                </div>
-            </div>
-
-            <div class="vue3">
-                <div class="imagen-aerolinea">
-                    <img src="../../assets/images/Aerolineas/FlyBondi.jpg" alt="Fly Bondi">
-                </div>
-                <div class="salida">
-                    <p>12:30 hs</p>
-                    <p>Bs. As.</p>
-                </div>
-                <div class="llegada">
-                    <p>00:30 hs</p>
-                    <p>Madrid</p>
-                </div>
-                <div class="datosvuelo">
-                    <p>Sin escala</p>
-                    <p>12 hs</p>
-                </div>
-            </div>
-        </main>
+        <div class="vuelos"></div>
 
         <section class="equipaje">
             <h3>Equipaje incluido</h3>
@@ -153,7 +98,7 @@
 
         </div>
     </footer>
-    <script type="module" src="../buscar/buscar.js"></script>
+    <script type="module" src="../buscar/resultados.js"></script>
 </body>
 
 </html>

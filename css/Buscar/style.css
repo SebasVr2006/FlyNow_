@@ -15,23 +15,26 @@ main {
 .vuelos {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 10px;
+    justify-content: flex-start;
 }
 
-.vue1,
-.vue2,
-.vue3 {
+.vue {
     font-size: 150%;
     height: 15vh;
     display: flex;
     font-weight: bold;
-    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     border-style: solid;
     border-color: rgb(184, 176, 176);
     border-radius: 10px;
     margin-right: 10%;
     margin-bottom: 5%;
+}
+
+.vue h1 {
+    align-self: center;
 }
 
 .porprecio,
@@ -84,6 +87,7 @@ main {
 
 .imagen-aerolinea {
     justify-content: flex-start;
+
     img {
         height: 110px;
         width: 110px;
