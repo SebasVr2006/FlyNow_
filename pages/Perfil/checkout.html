@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/Perfil/styles.css">
-    <title>FlyNow - Info</title>
+    <title>Checkout</title>
 </head>
-
 <body>
+    
     <header class="encabezado">
         <div class="titulo">
             <svg class="icono" viewBox="0 0 24 24">
@@ -30,72 +29,59 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <div class="barra_perfil">
-            <h1 class="perfil">Perfil</h1>
-            <h3 class="resaltado"><a href="info.html">Informacion Personal</a></h3>
-            <h3> <a href="reservas.html">Mis Vuelos Reservados</a></h3>
-            <h3> <a href="checkout.html">Checkout</a></h3>
-        </div>
-        <div class="contenido">
-            <h2>Informacion Personal</h2>
-            <section class="datos_usuario_info">
-                <h3 class="datos_encabezado">Datos del Usuario</h3>
-
-                <ul>
-                    <li>
-                        <strong>👤 Nombre Completo:</strong>
-                        <span>Juan Pérez</span>
-                    </li>
-                    <li>
-                        <strong>📧 Correo Electrónico:</strong>
-                        <span>juan.perez@gmail.com</span>
-                    </li>
-                    <li>
-                        <strong>🪪 DNI:</strong>
-                        <span>12.345.678</span>
-                    </li>
-                </ul>
+        <main>
+            <section class="barra_perfil">
+               <h1 class="perfil">Perfil</h1>
+                <h3><a href="info.html">Informacion Personal</a></h3>
+                <h3><a href="reservas.html">Mis Vuelos Reservados</a></h3>
+                <h3 class="resaltado">Checkout</h3>
             </section>
 
-            <section class="historial_vuelos">
-                <h2>Historial de Vuelos</h2>
+    <div class="tarjetas_checkout">
+        <section class="tarjeta">
+            <h3>Datos del Pasajero</h3>
+            <form class="datos_usuario">
+                <p><label for="nombre">👤Nombre: <input type="text" id="nombre"> </label></p>
+                <p><label for="DNI">🪪DNI: <input type="number" id="DNI"> </label></p>
+                <p><label for="correo_electronico">📧Correo Electronico: <input type="email" id="correo_electronico"> </label></p>
+            </form>
+        </section>
 
-                <div class="tabla_historial">
-                    <table class="tabla_vuelos">
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Ruta</th>
-                            <th>Aerolinea</th>
-                            <th>Estado</th>
-                        </tr>
-                        <tr>
-                            <td>15/05/2026</td>
-                            <td>Buenos Aires(BUE) - Madrid(MAD)</td>
-                            <td>FlyNow Airlines</td>
-                            <td>Completado</td>
-                        </tr>
-                        <tr>
-                            <td>02/04/2026</td>
-                            <td>New York(NY) - Paris</td>
-                            <td>FlyNow Airlines</td>
-                            <td>Completado</td>
-                        </tr>
-                        <tr>
-                            <td>18/3/2026</td>
-                            <td>Barcelona(BCN) - Roma</td>
-                            <td>FlyNow Airlines</td>
-                            <td>Cancelado</td>
-                        </tr>
-                    </table>
-                </div>
+        <section class="tarjeta">
+            <h3>Metodo De Pago</h3>
+            <form class="metodo_pago" id="form_pago">
+                <p><label for="tarjeta">Tarjeta De Credito<input type="radio" id="tarjeta" name="metodo_pago" value="Tarjeta de Credito"></label></p>
+                <p><label for="transferencia">Transferencia Bancaria<input type="radio" id="transferencia" name="metodo_pago" value="Transferencia Bancaria"></label></p>
+                <p id="metodo_seleccionado" style="font-weight: bold; color: rgb(1, 1, 141);"></p>
+            </form>
+        </section>
 
-            </section>
+        <section class="tarjeta">
+          <h3>Resumen de Vuelo</h3>
 
+         <div class="contenido-resumen">
+                <p id="resumen_ruta">Cargando Ruta...</p>
+                <p class="fecha" id="resumen_fecha">Cargando Fechas...</p>
+
+            <hr>
+
+        <div class="total-resumen">
+                <strong>Total</strong>
+                <span id="precio_total">$ 550 USD</span>
         </div>
-    </main>
-    <footer class="extra">
+
+        <div class="cupon">
+                <input type="text" id="input_cupon" placeholder="Ingresa tu cupón">
+                <button type="button" id="btn_cupon" class="boton_aplicar">Aplicar</button>
+        </div>
+        <button type="button" id="btn_finalizar" style="margin-top: 20px; width: 100%;" class="boton_aplicar">Confirmar Reserva</button>
+        </div>
+        </div>
+
+        </section>
+        </main>
+
+        <footer class="extra">
         <div class="info">
             <h3 class="fly">FlyNow:</h3>
             <ul>
@@ -126,6 +112,6 @@
         </div>
     </footer>
 
+    <script src="script-checkout.js"></script>
 </body>
-
 </html>
