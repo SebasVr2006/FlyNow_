@@ -48,11 +48,12 @@ function mostrarResultados() {
                 </div>
                 <div class="titulo-vue" >
                     <h1>${vuelo.origen} a ${vuelo.destino}</h1>
+                    <p>${vuelo.escalas ? 'Con escalas' : 'Sin escalas'}</p>
                     <button>Seleccionar</button>
                 </div>
                 <div>
-                    <p>${vuelo.escalas ? 'Con escalas' : 'Sin escalas'}</p>
                     <p>Salida: ${vuelo.horario}</p>
+                    <p>Llegada: ${vuelo.llegada}</p>
                     <p>Duración: ${vuelo.duracion}</p>
                     <p>Precio: $${vuelo.precio}</p>
                 </div>`;
@@ -69,6 +70,7 @@ function seleccionarVuelo(vuelo, div) {
     localStorage.setItem('vueloPrecio', JSON.stringify(vuelo.precio))
     localStorage.setItem('vueloDuracion', JSON.stringify(vuelo.duracion))
     localStorage.setItem('vueloSalida', JSON.stringify(vuelo.horario))
+    localStorage.setItem('vueloLlegada', JSON.stringify(vuelo.llegada))
 
     console.log('Vuelo registrado: ' + vuelo.origen + ' a ' + vuelo.destino)
 

@@ -3,6 +3,7 @@ const destino = localStorage.getItem('vueloDestino');
 const precio = localStorage.getItem('vueloPrecio');
 const duracion = localStorage.getItem('vueloDuracion');
 const salida = localStorage.getItem('vueloSalida');
+const llegada = localStorage.getItem('vueloLlegada');
 
 function seleccionarAsiento() {
     const asientos = document.querySelectorAll('.item-asiento');
@@ -35,6 +36,7 @@ function generarInfo() {
 
                     <div class="horario">
                         <p><span>Hora de salida: ${salida}</span></p>
+                        <p><span>Hora de llegada: ${llegada}</span></p>
                         <p><span>Duración del viaje: ${duracion}</span></p>
                     </div>
                 </div>
@@ -55,15 +57,16 @@ function guardarReserva() {
         destino: destino,
         precio: precio,
         duracion: duracion,
-        salida: salida
+        salida: salida,
+        llegada: llegada
     };
 
     const yaExiste = reservasGuardadas.some(rsrv =>
         rsrv.origen === nuevaReserva.origen &&
         rsrv.destino === nuevaReserva.destino &&
         rsrv.salida === nuevaReserva.salida);
-    
-        if (!yaExiste) {
+
+    if (!yaExiste) {
         reservasGuardadas.push(nuevaReserva);
         localStorage.setItem('reservas', JSON.stringify(reservasGuardadas));
         window.location.href = '../Perfil/reservas.html';

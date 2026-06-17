@@ -8,6 +8,7 @@ export const VUELOS = [
         codeAerolinea: "AeroArg",
         escalas: false,
         horario: '12:00',
+        llegada: '--',
         duracion: '--'
     },
 
@@ -20,6 +21,7 @@ export const VUELOS = [
         codeAerolinea: "AeroArg",
         escalas: false,
         horario: '12:10',
+        llegada: '14:30',
         duracion: '2h 20m'
     },
 
@@ -32,6 +34,7 @@ export const VUELOS = [
         codeAerolinea: "FlyBondi",
         escalas: false,
         horario: '14:00',
+        llegada: '16:40',
         duracion: '2h 40m'
     },
 
@@ -44,6 +47,7 @@ export const VUELOS = [
         codeAerolinea: "FlyBondi",
         escalas: false,
         horario: '11:00',
+        llegada: '15:30',
         duracion: '4h 30m'
     },
 
@@ -56,6 +60,7 @@ export const VUELOS = [
         codeAerolinea: "FlyBondi",
         escalas: true,
         horario: '10:00',
+        llegada: '16:20',
         duracion: '6h 20m'
     },
 
@@ -68,6 +73,7 @@ export const VUELOS = [
         codeAerolinea: "LATAM",
         escalas: true,
         horario: '09:00',
+        llegada: '18:30',
         duracion: '9h 30m'
     },
 
@@ -80,6 +86,7 @@ export const VUELOS = [
         codeAerolinea: "LATAM",
         escalas: true,
         horario: '09:20',
+        llegada: '21:50',
         duracion: '12h 30m'
     },
 
@@ -92,6 +99,7 @@ export const VUELOS = [
         codeAerolinea: "LATAM",
         escalas: true,
         horario: '07:00',
+        llegada: '13:00',
         duracion: '30h'
     },
 
@@ -104,6 +112,7 @@ export const VUELOS = [
         codeAerolinea: "FlyBondi",
         escalas: true,
         horario: '07:00',
+        llegada: '13:00',
         duracion: '30h'
     }
 ];

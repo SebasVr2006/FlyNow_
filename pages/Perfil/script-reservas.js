@@ -18,6 +18,7 @@ function cargarReservas() {
                 <div class="contenido_vuelos">
                     <ul>
                         <li>Hora de salida: ${reserva.salida}</li>
+                        <li>Hora de llegada: ${reserva.llegada}</li>
                         <li>Duración: ${reserva.duracion}</li>
                         <li>Precio: USD ${reserva.precio}</li>
                     </ul>
