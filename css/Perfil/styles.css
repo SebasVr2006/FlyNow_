@@ -1,5 +1,5 @@
 main {
-    min-height: 80vh;
+    min-height: 70vh;
     height: auto;
     display: grid;
     grid-template-columns: 260px 1fr;

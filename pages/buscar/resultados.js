@@ -71,6 +71,7 @@ function seleccionarVuelo(vuelo, div) {
     localStorage.setItem('vueloDuracion', JSON.stringify(vuelo.duracion))
     localStorage.setItem('vueloSalida', JSON.stringify(vuelo.horario))
     localStorage.setItem('vueloLlegada', JSON.stringify(vuelo.llegada))
+    localStorage.setItem('escalaLugar', JSON.stringify(vuelo.lugarEscalas))
 
     console.log('Vuelo registrado: ' + vuelo.origen + ' a ' + vuelo.destino)
 

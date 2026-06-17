@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- DATOS SIMULADOS PARA EL VUELO
     const datosVuelo = {
         origen: "Buenos Aires",
         codigoOrigen: "BUE",
@@ -13,11 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let totalActual = datosVuelo.precioBase;
     let cuponAplicado = false;
 
-    //  CAPTURA DE ELEMENTOS DEL DOM 
     const inputNombre = document.getElementById("nombre");
     const inputDNI = document.getElementById("DNI");
     const inputCorreo = document.getElementById("correo_electronico");
-    
+
     const radiosPago = document.getElementsByName("metodo_pago");
     const txtMetodoSeleccionado = document.getElementById("metodo_seleccionado");
 
@@ -29,34 +27,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCupon = document.getElementById("btn_cupon");
     const btnFinalizar = document.getElementById("btn_finalizar");
 
-    // 
+
     //  Renderizar resumen dinámicamente
-    // 
     function renderizarResumen() {
         txtRuta.innerHTML = `<strong>${datosVuelo.origen}</strong> (${datosVuelo.codigoOrigen}) - ${datosVuelo.destino} (${datosVuelo.codigoDestino})`;
         txtFecha.textContent = `${datosVuelo.fechaInicio} - ${datosVuelo.fechaFin}`;
         actualizarInterfazTotal();
     }
 
-    // 
+
     //  Actualizar el total en tiempo real
-    // 
     function actualizarInterfazTotal() {
         txtTotal.textContent = `$ ${totalActual} USD`;
     }
 
-    // 
+
+
     // Actualizar método de pago visualmente
-    // 
     radiosPago.forEach(radio => {
         radio.addEventListener("change", (e) => {
             txtMetodoSeleccionado.textContent = `Seleccionado: ${e.target.value}`;
         });
     });
 
-    // 
+
+
     //  Validar código de descuento y recalcular
-    // 
     btnCupon.addEventListener("click", () => {
         const codigo = inputCupon.value.trim().toUpperCase();
 
@@ -65,12 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-       
+
         if (codigo === "FLYNOW10") {
             const descuento = datosVuelo.precioBase * 0.10; // 10%
             totalActual = datosVuelo.precioBase - descuento;
             cuponAplicado = true;
-            
+
             alert("¡Cupón del 10% aplicado con éxito!");
             actualizarInterfazTotal(); // Consigna 6 en acción
         } else if (codigo === "") {
@@ -80,15 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 
+
+
     // Capturar, validar dinámicamente y confirmar
-    // 
     btnFinalizar.addEventListener("click", () => {
         // Captura de datos
         const nombre = inputNombre.value.trim();
         const dni = inputDNI.value.trim();
         const correo = inputCorreo.value.trim();
-        
+
         // Determinar si seleccionó pago
         let pagoSeleccionado = null;
         radiosPago.forEach(radio => {
@@ -125,6 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`¡Reserva confirmada con éxito!\n\nPasajero: ${nombre}\nDNI: ${dni}\nTotal pagado: $${totalActual} USD\nMétodo: ${pagoSeleccionado}`);
     });
 
-    // Inicializar la vista cargando los datos del vuelo al abrir la página
+
     renderizarResumen();
 });

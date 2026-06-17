@@ -7,6 +7,7 @@ export const VUELOS = [
         aerolinea: "Aerolineas Argentinas",
         codeAerolinea: "AeroArg",
         escalas: false,
+        lugarEscalas: null,
         horario: '12:00',
         llegada: '--',
         duracion: '--'
@@ -20,6 +21,7 @@ export const VUELOS = [
         aerolinea: "Aerolineas Argentinas",
         codeAerolinea: "AeroArg",
         escalas: false,
+        lugarEscalas: null,
         horario: '12:10',
         llegada: '14:30',
         duracion: '2h 20m'
@@ -33,6 +35,7 @@ export const VUELOS = [
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
         escalas: false,
+        lugarEscalas: null,
         horario: '14:00',
         llegada: '16:40',
         duracion: '2h 40m'
@@ -46,6 +49,7 @@ export const VUELOS = [
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
         escalas: false,
+        lugarEscalas: null,
         horario: '11:00',
         llegada: '15:30',
         duracion: '4h 30m'
@@ -59,6 +63,7 @@ export const VUELOS = [
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
         escalas: true,
+        lugarEscalas: "Brasil",
         horario: '10:00',
         llegada: '16:20',
         duracion: '6h 20m'
@@ -72,6 +77,7 @@ export const VUELOS = [
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
         escalas: true,
+        lugarEscalas: "Panamá y Mexico",
         horario: '09:00',
         llegada: '18:30',
         duracion: '9h 30m'
@@ -85,6 +91,7 @@ export const VUELOS = [
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
         escalas: true,
+        lugarEscalas: "Brasil",
         horario: '09:20',
         llegada: '21:50',
         duracion: '12h 30m'
@@ -98,6 +105,7 @@ export const VUELOS = [
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
         escalas: true,
+        lugarEscalas: "Nueva Zelanda",
         horario: '07:00',
         llegada: '13:00',
         duracion: '30h'
@@ -111,6 +119,7 @@ export const VUELOS = [
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
         escalas: true,
+        lugarEscalas: "Nueva Zelanda",
         horario: '07:00',
         llegada: '13:00',
         duracion: '30h'
