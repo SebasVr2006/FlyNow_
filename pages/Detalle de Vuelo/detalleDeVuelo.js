@@ -46,4 +46,30 @@ function generarInfo() {
 
 }
 
+function guardarReserva() {
+    // Se crea un array de reservas buscando reservas existentes o se crea un array vacio.
+    const reservasGuardadas = JSON.parse(localStorage.getItem('reservas')) || [];
+
+    const nuevaReserva = {
+        origen: origen,
+        destino: destino,
+        precio: precio,
+        duracion: duracion,
+        salida: salida
+    };
+
+    const yaExiste = reservasGuardadas.some(rsrv =>
+        rsrv.origen === nuevaReserva.origen &&
+        rsrv.destino === nuevaReserva.destino &&
+        rsrv.salida === nuevaReserva.salida);
+    
+        if (!yaExiste) {
+        reservasGuardadas.push(nuevaReserva);
+        localStorage.setItem('reservas', JSON.stringify(reservasGuardadas));
+        window.location.href = '../Perfil/reservas.html';
+    }
+}
+
+document.querySelector('.confirmar-reserva').addEventListener('click', guardarReserva);
+
 generarInfo(); seleccionarAsiento();

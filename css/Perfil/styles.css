@@ -73,25 +73,25 @@ h3 {
     padding: 8px;
 }
 
-.datos_usuario ul {
+.datos_usuario_info ul {
     padding: 0;
 }
 
-.datos_usuario li {
+.datos_usuario_info li {
     margin: 10px 0;
 }
 
-.datos_usuario strong {
+.datos_usuario_info strong {
     display: inline-block;
     width: 20%;
     margin: 5px;
 }
 
-.datos_usuario span {
+.datos_usuario_info span {
     display: inline-block;
 }
 
-.datos_usuario {
+.datos_usuario_info {
     border: 1px solid gray;
     border-radius: 8px;
 }
@@ -119,6 +119,8 @@ h3 {
 .tabla_vuelos th,
 .tabla_vuelos td {
     padding: 10px 14px;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .tabla_historial td {
@@ -135,4 +137,83 @@ footer {
 
 header {
     position: sticky;
+}
+
+
+.tarjetas_checkout {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px;
+}
+
+.tarjeta {
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: beige;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.tarjeta h3 {
+    background-color: lightskyblue;
+    color: rgb(1, 1, 141);
+    padding: 16px 24px;
+    margin: 0;
+    border-bottom: 1px solid gray;
+}
+
+.tarjeta form,
+.contenido-resumen {
+    padding: 20px 24px;
+}
+
+.datos_usuario {
+    border: none;
+    border-radius: 0;
+}
+
+.datos_usuario label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.datos_usuario input {
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+.metodo_pago p {
+    margin-bottom: 28px;
+}
+
+.total-resumen {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding-top: 12px;
+    margin-top: 16px;
+}
+
+.cupon {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.cupon input {
+    flex: 1;
+    padding: 6px;
+}
+
+.boton_aplicar {
+    background-color: lightskyblue;
+    border: 1px solid rgb(1, 1, 141);
+    border-radius: 8px;
+    padding: 8px 18px;
+    color: rgb(1, 1, 141);
+    cursor: pointer;
 }
