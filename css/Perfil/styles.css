@@ -217,3 +217,13 @@ header {
     color: rgb(1, 1, 141);
     cursor: pointer;
 }
+
+#metodo_seleccionado {
+    font-weight: bold;
+    color: rgb(1, 1, 141);
+}
+
+#btn_finalizar {
+    margin-top: 20px;
+    width: 100%;
+}

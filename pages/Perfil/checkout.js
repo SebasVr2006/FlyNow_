@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const datosVuelo = {
-        origen: "Buenos Aires",
-        codigoOrigen: "BUE",
-        destino: "Madrid",
-        codigoDestino: "MAD",
-        fechaInicio: "10/08/2024",
-        fechaFin: "20/08/2024",
+        origen: JSON.parse(localStorage.getItem('vueloOrigen')),
+        destino: JSON.parse(localStorage.getItem('vueloDestino')),
+        fechaInicio: localStorage.getItem('fechaIda'),
+        fechaFin: localStorage.getItem('fechaVuelta'),
         precioBase: 550
     };
 
@@ -30,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //  Renderizar resumen dinámicamente
     function renderizarResumen() {
-        txtRuta.innerHTML = `<strong>${datosVuelo.origen}</strong> (${datosVuelo.codigoOrigen}) - ${datosVuelo.destino} (${datosVuelo.codigoDestino})`;
+        txtRuta.innerHTML = `<strong>${datosVuelo.origen}</strong> - ${datosVuelo.destino}`;
         txtFecha.textContent = `${datosVuelo.fechaInicio} - ${datosVuelo.fechaFin}`;
         actualizarInterfazTotal();
     }
