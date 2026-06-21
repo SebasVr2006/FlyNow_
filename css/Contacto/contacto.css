@@ -1,4 +1,4 @@
-.contactanos{
+.contactanos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,17 +6,18 @@
 }
 
 
-.formu{
+.formu {
     width: 80%;
     margin: 0 auto;
     height: 50vh;
     display: grid;
     grid-template-columns: 40% 60%;
     margin-left: 10%;
-   
+
 }
 
-.eti, .etimsj{
+.eti,
+.etimsj {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -25,11 +26,11 @@
     margin-top: 3%;
 }
 
-.etimsj{
+.etimsj {
     margin-top: 0%;
 }
 
-.camp{
+.camp {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,11 +38,11 @@
     height: 5vh;
 }
 
-.texto{
+.texto {
     width: 70%;
 }
 
-.btn{
+.botones {
     grid-column: span 2;
     display: flex;
     justify-content: space-evenly;
@@ -49,9 +50,33 @@
     margin-top: 2%;
 }
 
-.btn1, .btn2{
-    width: 10%;
-    height: 4vh;
+.boton {
+    padding: 1rem 2rem;
+    border-radius: 1vh;
+}
+
+label {
+    justify-content: flex-start;
     font-size: 120%;
-    border-radius: 10px;    
+    font-weight: bold;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    width: 30rem;
+    height: 5vh;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8vh;
+    transition: border-color 0.2s;
+}
+
+textarea {
+    height: 10vh;
+}
+
+input:focus {
+    border-color: rgb(1, 1, 141);
+    outline: none;
 }
