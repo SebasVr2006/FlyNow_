@@ -17,8 +17,13 @@ input {
     border-radius: 1vh;
 }
 
-.boton {
-    margin-right: 5rem;
+.botones-container {
+    display: flex;
+    padd: 2rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
 }
 
 .registro-container {
@@ -35,19 +40,20 @@ input {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 
     p {
-        font-size: 200%;
+        font-size: 300%;
         align-self: center;
     }
 
     button {
-        align-self: center;
-        font-size: 150%;
-        width: 20rem;
-        border-radius: 0.7vh ;
-        background-color: blue;
-        border-color: blue;
+        font-size: 200%;
+        background-color: rgb(1, 1, 141);
         color: white;
+        border: none;
+        border-radius: 0.3rem;
+        padding: 0.5rem;
     }
 }

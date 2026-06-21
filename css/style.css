@@ -4,7 +4,7 @@
 }
 
 main {
-    height: auto;
+    height: 57vh;
     padding: 3rem 0;
     margin: 3rem;
     width: 90%;
@@ -78,6 +78,12 @@ h1 {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     transition: background-color 0.2s;
+}
+
+.menu .option li:last-child a {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
 }
 
 .option li a:hover {

@@ -15,6 +15,7 @@ function verificarSesion() {
             cuenta.logueado = true;
             avisoLogueado.style.display = 'flex';
             loginForm.style.display = 'none';
+            document.querySelector('.botones-container').style.display = 'none';
             return;
         }
     }
