@@ -8,22 +8,26 @@ const pasajeros = localStorage.getItem('pasajeros');
 const clase = localStorage.getItem('clase');
 
 function filtrarResultados() {
+    // Se buscan todos los inputs que tengan de nombre "tipo", se verifica q estén checkeados y se devuelve su valor
     const tipoDeVuelo = document.querySelector('input[name=tipo]:checked')?.value;
+
+    // Se buscan los elementos check-aeroline, se corrobora que estén checkeados y luego con el map se devuelve el valor de cada uno.
     const aerolineaSeleccionada = [...document.querySelectorAll('.check-aerolinea:checked')].map(e => e.value);
 
     return VUELOS.filter(vuelo => {
         const coincidenciaRuta = vuelo.origen.toLowerCase() === origen.toLowerCase() && vuelo.destino.toLowerCase() === destino.toLowerCase();
 
-        let tieneEscala = true;
-        if (tipoDeVuelo === 'directo') tieneEscala = !vuelo.escalas;
-        if (tipoDeVuelo === 'escala') tieneEscala = vuelo.escalas;
+        // Nombre erroneo, sería pasaFiltro
+        let pasaFiltro = true;
+        if (tipoDeVuelo === 'directo') pasaFiltro = !vuelo.escalas;
+        if (tipoDeVuelo === 'escala') pasaFiltro = vuelo.escalas;
 
         let coincideAerolinea = true;
         if (aerolineaSeleccionada.length > 0) {
             coincideAerolinea = aerolineaSeleccionada.includes(vuelo.aerolinea)
         }
 
-        return coincidenciaRuta && tieneEscala && coincideAerolinea;
+        return coincidenciaRuta && pasaFiltro && coincideAerolinea;
     });
 }
 
@@ -55,7 +59,7 @@ function mostrarResultados() {
                     <p>Salida: ${vuelo.horario}</p>
                     <p>Llegada: ${vuelo.llegada}</p>
                     <p>Duración: ${vuelo.duracion}</p>
-                    <p>Precio: $${vuelo.precio}</p>
+                    <p>Precio: USD ${vuelo.precio}</p>
                 </div>`;
 
         div.querySelector('button').addEventListener('click', () => { seleccionarVuelo(vuelo, div) })

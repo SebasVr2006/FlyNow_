@@ -1,7 +1,7 @@
 import { cuentasRegistradas } from "../Login/cuentas.js";
 
 const mail = localStorage.getItem('mail');
-const usuario = localStorage.getItem('usuario');
+const usuario = cuentasRegistradas.find(c => c.usuario === mail)
 
 function renderizarDatosDeUsuario() {
     const container = document.querySelector('.datos_usuario');

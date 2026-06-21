@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         destino: JSON.parse(localStorage.getItem('vueloDestino')),
         fechaInicio: localStorage.getItem('fechaIda'),
         fechaFin: localStorage.getItem('fechaVuelta'),
-        precioBase: 550
+        precioBase: localStorage.getItem('vueloPrecio'),
     };
 
     let totalActual = datosVuelo.precioBase;

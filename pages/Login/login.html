@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/Login/styles.css">
+    <link rel="stylesheet" href="../../css/Login/login.css">
     <title>FlyNow - Login</title>
 </head>
 
@@ -32,6 +32,11 @@
     </header>
 
     <main>
+        <div id="ya-logueado">
+            <p>Ya iniciaste sesión</p>
+            <button id="btn-cerrar-sesion">Cerrar sesión</button>
+        </div>
+
         <form class="login-form" id="login-form">
 
             <label for="E-Mail">E-Mail</label>
@@ -41,16 +46,19 @@
             <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña">
 
             <div class="botones">
-                <button class="boton">Aceptar</button>
+                <button class="boton" type="submit">Aceptar</button>
                 <button class="boton" type="reset">Cancelar</button>
             </div>
         </form>
-        <div class="registro-container">
-            <p>No tiene una cuenta. <a href="./registrarse.html">Registrate.</a></p>
+        <div class="botones-container">
+            <div class="registro-container">
+                <p>No tiene una cuenta. <a href="./registrarse.html">Registrate.</a></p>
+            </div>
+            <div class="recuperar-Link">
+                <p>Olvidó su contraseña. <a href="./recuperar.html">Recuperar.</a></p>
+            </div>
         </div>
-        <div class="recuperar-Link">
-            <p>Olvidó su contraseña. <a href="./recuperar.html">Recuperar.</a></p>
-        </div>
+
     </main>
     <footer class="extra">
         <div class="info">

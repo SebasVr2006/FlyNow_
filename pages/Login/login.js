@@ -1,14 +1,40 @@
 import { cuentasRegistradas } from "./cuentas.js";
 
-document.querySelector('#login-form').addEventListener('submit', (frm) => {
-    frm.preventDefault();
-    if (validarFormulario()) {
-        window.location.href = "../../index.html";
+const loginForm = document.querySelector('#login-form');
+
+const mailActivo = localStorage.getItem('usuarioLogueado');
+const avisoLogueado = document.querySelector('#ya-logueado');
+
+avisoLogueado.style.display = 'none';
+
+// Se verifica que no haya una cuenta logueada previamente
+function verificarSesion() {
+    if (mailActivo) {
+        const cuenta = cuentasRegistradas.find(c => c.mail === mailActivo);
+        if (cuenta) {
+            cuenta.logueado = true;
+            avisoLogueado.style.display = 'flex';
+            loginForm.style.display = 'none';
+            return;
+        }
     }
-})
+    avisoLogueado.style.display = 'none';
+    formLogin.style.display = 'block';
+}
+
+// Al cerrar sesión se elimina el localStorage
+document.querySelector('#btn-cerrar-sesion').addEventListener('click', () => {
+    const cuenta = cuentasRegistradas.find(c => c.mail === mailActivo);
+    if (cuenta) cuenta.logueado = false;
+
+    localStorage.clear();
+    location.reload();
+});
 
 // Validacion del formulario
-function validarFormulario() {
+loginForm.addEventListener ('submit', (frm) => {
+    frm.preventDefault();
+
     const mail = document.querySelector('#E-Mail').value;
     const contrasena = document.querySelector('#contrasena').value;
 
@@ -19,12 +45,10 @@ function validarFormulario() {
     if (mail === '') {
         alert('Ingrese un email valido');
         esValido = false;
-        return;
 
     } else if (!encontrarMail) {
         alert('Mail no registrado');
         esValido = false;
-        return;
 
     } else {
         localStorage.removeItem('mail');
@@ -35,16 +59,24 @@ function validarFormulario() {
     if (contrasena === '') {
         alert('Ingrese una contraseña');
         esValido = false;
-        return;
+
     } else if (encontrarMail.contrasena !== contrasena) {
         alert('Contraseña incorrecta');
         esValido = false;
-        return;
+
     } else {
         localStorage.removeItem('contrasena');
         localStorage.setItem('contrasena', contrasena);
     }
 
-    return esValido;
+    if (esValido) {
+        cuentasRegistradas.forEach(cuenta => {
+            cuenta.logueado = false;
+            localStorage.setItem('usuarioLogueado', mail);
+        })
+        window.location.href="../../index.html";
+    }
 
-}
+})
+
+verificarSesion();

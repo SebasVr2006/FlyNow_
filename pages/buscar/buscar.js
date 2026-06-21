@@ -1,9 +1,4 @@
-document.querySelector('#form-busqueda').addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (validarFormulario()) {
-        window.location.href = 'pages/Vuelos/buscar.html'
-    }
-});
+const form = document.querySelector('#form-busqueda');
 
 function mostrarError(id) {
     document.querySelector(id).classList.add('visible');
@@ -13,69 +8,79 @@ function ocultarError(id) {
     document.querySelector(id).classList.remove('visible');
 }
 
-function validarFormulario() {
-    const origen = document.querySelector('#origen').value;
-    const destino = document.querySelector('#destino').value;
-    const fechaIda = document.querySelector('#ida').value;
-    const fechaVuelta = document.querySelector('#vuelta').value;
-    const pasajeros = document.querySelector('#pasajeros').value;
-    const clase = document.querySelector('#clase').value;
-    let esValido = true;
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    if (origen.trim() === '') {
+    const origen = document.querySelector('#origen').value.trim();
+    const destino = document.querySelector('#destino').value.trim();
+    const fechaIda = document.querySelector('#ida').value.trim();
+    const fechaVuelta = document.querySelector('#vuelta').value.trim();
+    const pasajeros = parseInt(document.querySelector('#pasajeros').value);
+    const clase = document.querySelector('#clase').value;
+
+    let esValido = true
+
+    // Validación origen
+    if (origen === '') {
         mostrarError('#error-origen')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-origen')
         localStorage.setItem('origen', origen)
     }
 
-    if (destino.trim() === '') {
+    // Validación destino
+    if (destino === '') {
         mostrarError('#error-destino')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-destino')
     }
 
-    if (origen.trim() !== '' && origen.trim() === destino.trim()) {
+    // Se evalúa que el origen y el destino no coincidan
+    if (origen !== '' && origen === destino) {
         mostrarError('#error-igual')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-igual')
         localStorage.setItem('destino', destino)
     }
 
-    if (fechaIda.trim() === '') {
+    // Validación de fechaIda
+    if (fechaIda === '') {
         mostrarError('#error-ida')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-ida')
         localStorage.setItem('fechaIda', fechaIda)
     }
 
-    if (fechaVuelta.trim() === '') {
+    // Validación de fechaVuelta
+    if (fechaVuelta === '') {
         mostrarError('#error-vuelta')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-vuelta')
         localStorage.setItem('fechaVuelta', fechaVuelta)
     }
 
-    if (pasajeros.trim() === '') {
+    // Validación de pasajeros
+    if (isNaN(pasajeros) || pasajeros < 1) {
         mostrarError('#error-pasajeros')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-pasajeros')
         localStorage.setItem('pasajeros', pasajeros)
     }
 
-    if (clase.trim() === '') {
+    // Validación de clase
+    if (clase === '') {
         mostrarError('#error-clase')
-        esValido = false
+        esValido = false;
     } else {
         ocultarError('#error-clase')
         localStorage.setItem('clase', clase)
     }
 
-    return esValido;
-}
+    if (esValido) window.location.href = "pages/Vuelos/buscar.html";
+});

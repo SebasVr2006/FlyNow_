@@ -30,3 +30,24 @@ input {
     display: flex;
     justify-content: center;
 }
+
+#ya-logueado {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+        font-size: 200%;
+        align-self: center;
+    }
+
+    button {
+        align-self: center;
+        font-size: 150%;
+        width: 20rem;
+        border-radius: 0.7vh ;
+        background-color: blue;
+        border-color: blue;
+        color: white;
+    }
+}

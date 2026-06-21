@@ -1,7 +1,7 @@
 export const VUELOS = [
     {
         id: 1,
-        origen: "Argentina",
+        origen: "Buenos Aires",
         destino: "Argentina",
         precio: 80.0,
         aerolinea: "Aerolineas Argentinas",
@@ -16,7 +16,7 @@ export const VUELOS = [
     {
         id: 2,
         origen: "Buenos Aires",
-        destino: "Chile",
+        destino: "Santiago",
         precio: 170.00,
         aerolinea: "Aerolineas Argentinas",
         codeAerolinea: "AeroArg",
@@ -30,7 +30,7 @@ export const VUELOS = [
     {
         id: 3,
         origen: "Buenos Aires",
-        destino: "Brasil",
+        destino: "Sao Paulo",
         precio: 200.0,
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
@@ -44,7 +44,7 @@ export const VUELOS = [
     {
         id: 4,
         origen: "Buenos Aires",
-        destino: "Perú",
+        destino: "Lima",
         precio: 300.0,
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
@@ -58,7 +58,7 @@ export const VUELOS = [
     {
         id: 5,
         origen: "Buenos Aires",
-        destino: "Colombia",
+        destino: "Bogotá",
         precio: 320.0,
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
@@ -72,7 +72,7 @@ export const VUELOS = [
     {
         id: 6,
         origen: "Buenos Aires",
-        destino: "Estados Unidos",
+        destino: "Nueva York",
         precio: 500.0,
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
@@ -86,7 +86,7 @@ export const VUELOS = [
     {
         id: 7,
         origen: "Buenos Aires",
-        destino: "España",
+        destino: "Madrid",
         precio: 650.0,
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
@@ -100,7 +100,7 @@ export const VUELOS = [
     {
         id: 8,
         origen: "Buenos Aires",
-        destino: "Japón",
+        destino: "Tokio",
         precio: 1800.0,
         aerolinea: "LATAM",
         codeAerolinea: "LATAM",
@@ -114,7 +114,7 @@ export const VUELOS = [
     {
         id: 9,
         origen: "Buenos Aires",
-        destino: "Japón",
+        destino: "Tokio",
         precio: 2500.0,
         aerolinea: "FlyBondi",
         codeAerolinea: "FlyBondi",
