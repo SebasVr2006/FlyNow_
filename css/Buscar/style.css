@@ -1,11 +1,13 @@
 .cuerpo {
     width: 90%;
-    height: 73vh;
     margin-left: 5%;
-    background-color: bisque;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    padding-top: 2%;
+    gap: 1rem;
+    height: auto;
 }
 
 main {
@@ -20,59 +22,125 @@ main {
 }
 
 .vue {
-    font-size: 150%;
-    height: 15.4vh;
+    font-size: 1rem;
+    height: auto;
     display: flex;
-    font-weight: bold;
-    justify-content: space-evenly;
     align-items: center;
-    border-style: solid;
-    border-color: rgb(184, 176, 176);
-    border-radius: 10px;
-    margin-right: 10%;
-    margin-bottom: 5%;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border: 0.1vh solid rgb(219, 219, 219);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin: 0;
 }
 
 .vue h1 {
     align-self: center;
 }
 
-.porprecio,
-.tipovuelo,
-.aerolineas,
-.subt {
-    line-height: 1px;
-    margin-left: 10%;
-    font-size: 130%;
-    margin-bottom: 15%;
+.filtros {
+    background-color: #ffffff;
+    border-radius: 1.2vh;
+    border: 0.1vh solid rgb(219, 219, 219);
+    box-shadow: 0 0.4vh 1.5vh rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    height: 67vh;
 }
 
-.tipovuelo {
+.filtros h4,
+.filtros .subt {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    border-bottom: 0.2vh solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+.filtros label {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 0.8vh;
+    font-size: 0.95rem;
+    color: #475569;
+    cursor: pointer;
+    transition: color 0.2s ease;
 }
 
+.filtros label:hover {
+    color: #01018d;
+}
+
+.porprecio input[type="range"] {
+    width: 100%;
+    accent-color: #01018d;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.porprecio h4 {
+    margin-bottom: .5rem;
+}
+
+.tipovuelo,
 .aerolineas {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.filtros {
-    display: grid;
-    padding-left: 1rem;
-    grid-template-columns: 100%;
-    grid-template-rows: 5% 15% 15% 15%;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem 0;
 }
 
 .equipaje {
-    font-size: 150%;
-    line-height: 10vh;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    border: 0.1vh solid rgb(219, 219, 219);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    height: fit-content;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.equipaje h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.75rem 0;
+    border-bottom: 0.125rem solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+.equipaje-detalle h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0.75rem 0 0.5rem 0;
+}
+
+.equipaje-detalle ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.equipaje-detalle li {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.equipaje .pol {
+    display: inline-block;
+    color: rgb(1, 1, 141);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.equipaje p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #475569;
 }
 
 .resaltar {
@@ -81,28 +149,76 @@ main {
     color: rgb(4, 4, 243);
 }
 
-.pol {
-    text-decoration: underline;
-}
-
 .imagen-aerolinea {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+}
 
-    img {
-        height: 110px;
-        width: 110px;
-    }
+.imagen-aerolinea img {
+    height: 5.5rem;
+    width: 5.5rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
 }
 
 .titulo-vue {
     display: flex;
-    text-align: center;
     flex-direction: column;
-    width: 30vh;
-    
-    button {
-        align-self: center;
-        width: 15vh;
-    }
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+    gap: 0.4rem;
+}
+
+.titulo-vue h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.titulo-vue p {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.vue-boton {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.vue-boton button {
+    align-self: flex-start;
+    width: auto;
+    margin-top: 0.4rem;
+    background-color: rgb(1, 1, 141);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.vue-boton button:hover {
+    background-color: #000066;
+}
+
+.vue>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: 0;
+    text-align: right;
+}
+
+.vue>div:last-child p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
 }

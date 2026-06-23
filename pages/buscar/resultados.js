@@ -51,9 +51,11 @@ function mostrarResultados() {
                     <img src="../../assets/images/Aerolineas/${vuelo.codeAerolinea}.jpg" alt="${vuelo.aerolinea}">
                 </div>
                 <div class="titulo-vue" >
-                    <h1>${vuelo.origen} a ${vuelo.destino}</h1>
+                    <h3>${vuelo.origen} a ${vuelo.destino}</h3>
                     <p>${vuelo.escalas ? 'Con escalas' : 'Sin escalas'}</p>
-                    <button>Seleccionar</button>
+                </div>
+                <div class="vue-boton">
+                     <button>Seleccionar</button>
                 </div>
                 <div>
                     <p>Salida: ${vuelo.horario}</p>
