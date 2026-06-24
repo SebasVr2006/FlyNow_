@@ -61,7 +61,7 @@ function mostrarResultados() {
                     <p>Salida: ${vuelo.horario}</p>
                     <p>Llegada: ${vuelo.llegada}</p>
                     <p>Duración: ${vuelo.duracion}</p>
-                    <p>Precio: USD ${vuelo.precio}</p>
+                    <p>Precio base: USD ${vuelo.precio}</p>
                 </div>`;
 
         div.querySelector('button').addEventListener('click', () => { seleccionarVuelo(vuelo, div) })

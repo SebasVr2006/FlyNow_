@@ -1,14 +1,15 @@
 import { cuentasRegistradas } from "../Login/cuentas.js";
 
-const mail = localStorage.getItem('mail');
-const usuario = cuentasRegistradas.find(c => c.mail === mail)
+const mailActivo = localStorage.getItem('usuarioLogueado');
+const todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios'));
+
+const usuario = todasLasCuentas.find(c => c.mail === mailActivo);
 
 function renderizarDatosDeUsuario() {
     const container = document.querySelector('.datos_usuario');
     container.innerHTML = '';
 
     container.innerHTML = `
-        <h3 class="datos_encabezado">Datos del Usuario</h3>
             <ul>
                 <li>
                     <strong>Nombre Completo:</strong>
@@ -16,11 +17,11 @@ function renderizarDatosDeUsuario() {
                 </li>
                 <li>
                     <strong>Correo Electrónico:</strong>
-                    <span>${mail}</span>
+                    <span>${usuario.mail}</span>
                 </li>
                 <li>
                     <strong>DNI:</strong>
-                    <span>12.345.678</span>
+                    <span>${usuario.DNI}</span>
                 </li>
             </ul>`;
 }

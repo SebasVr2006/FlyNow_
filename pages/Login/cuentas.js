@@ -1,1 +1,1 @@
-export const cuentasRegistradas = [{ usuario: 'administador', contrasena: 'admin', mail: 'admin@admin.com', logueado: false }]
+export const cuentasRegistradas = [{ usuario: 'administador', contrasena: 'admin', DNI: 12345678, mail: 'admin@admin.com', logueado: false, reservas: [] }]

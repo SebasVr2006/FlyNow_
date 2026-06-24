@@ -1,3 +1,5 @@
+import { cuentasRegistradas } from "../Login/cuentas.js";
+
 const origen = JSON.parse(localStorage.getItem('vueloOrigen'));
 const destino = JSON.parse(localStorage.getItem('vueloDestino'));
 const precio = JSON.parse(localStorage.getItem('vueloPrecio'));
@@ -5,7 +7,7 @@ const duracion = JSON.parse(localStorage.getItem('vueloDuracion'));
 const salida = JSON.parse(localStorage.getItem('vueloSalida'));
 const llegada = JSON.parse(localStorage.getItem('vueloLlegada'));
 const lugarEscala = JSON.parse(localStorage.getItem('escalaLugar'));
-const cantPasajeros = 0;
+const cantPasajeros = parseInt(localStorage.getItem('pasajeros'));
 
 function seleccionarAsiento() {
     const asientos = document.querySelectorAll('.item-asiento');
@@ -27,6 +29,14 @@ function seleccionarAsiento() {
     })
 }
 
+function calcularPrecioTotal() {
+    if (cantPasajeros > 1) {
+        return precio * (cantPasajeros * 0.75)
+    } else {
+        return precio;
+    }
+}
+
 function generarInfo() {
     const container = document.querySelector('.DetalleDeVuelo');
     container.innerHTML = '';
@@ -39,6 +49,7 @@ function generarInfo() {
 
                     <div class="horario">
                         <p><span>${lugarEscala !== '' || lugarEscala !== null ? `Escalas en: ${lugarEscala}` : ''}</span></p>
+                        <p><span>Cantidad de pasajeros: ${cantPasajeros}</span></p>
                         <h4><span>Horario</span></h4>
                         <ul>
                             <li><span>Salida: ${salida} - Llegada: ${llegada}</span></li>      
@@ -50,7 +61,7 @@ function generarInfo() {
                 </div>
                 <div class="total">
                     <span>Total</span>
-                    <span class="precio">USD ${precio}</span>
+                    <span class="precio">USD ${calcularPrecioTotal()}</span>
                 </div>`;
 }
 
@@ -61,7 +72,7 @@ function guardarReserva() {
     const nuevaReserva = {
         origen: origen,
         destino: destino,
-        precio: precio,
+        precio: calcularPrecioTotal(),
         duracion: duracion,
         salida: salida,
         llegada: llegada,
@@ -75,8 +86,23 @@ function guardarReserva() {
 
     if (!yaExiste) {
         reservasGuardadas.push(nuevaReserva);
-        localStorage.setItem('reservas', JSON.stringify(reservasGuardadas));
-        window.location.href = '../Perfil/reservas.html';
+
+        const mailActivo = localStorage.getItem('usuarioLogueado');
+        let todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios'));
+
+        const cuenta = todasLasCuentas.find(c => c.mail === mailActivo);
+
+        if (!cuenta) {
+            alert('No has iniciado sesión. Por favor, inicia sesión para reservar tu vuelo.');
+        } else {
+            cuenta.reservas.push(nuevaReserva);
+
+            // Se guarda una versión local del array de cuentas para poder usarla en otras vistas
+            localStorage.setItem('cuentasUsuarios', JSON.stringify(todasLasCuentas));
+            localStorage.setItem('reservas', JSON.stringify(reservasGuardadas));
+
+            window.location.href = '../Perfil/checkout.html';
+        }
     } else {
         alert('Este vuelo ya existe')
     }
