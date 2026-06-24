@@ -206,3 +206,56 @@ footer {
     color: black;
 }
 
+@media (max-width: 68.75rem) {
+    .container {
+        grid-template-columns: 16rem 1fr;
+    }
+
+    .cards-ofertas {
+        grid-template-columns: repeat(2, minmax(0, auto));
+        gap: 2rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 51.25rem) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        margin: 1rem;
+    }
+
+    .cards-ofertas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 35rem) {
+    main {
+        min-height: auto;
+    }
+
+    .ofertas h2 {
+        font-size: 1.7rem;
+    }
+
+    .cards-ofertas {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card,
+    .info-card-paquete,
+    .img-ofertas {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .img-ofertas {
+        height: 12rem;
+    }
+}
+

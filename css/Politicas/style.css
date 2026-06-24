@@ -1,12 +1,35 @@
-.titulopol{
+.titulopol {
     display: flex;
     justify-content: center;
     text-decoration: underline;
 }
 
-.textopol{
+.textopol {
     font-size: 120%;
     margin-top: 3%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+@media (max-width: 50rem) {
+    .titulopol {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        height: fit-content;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .textopol {
+        font-size: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 1.5;
+    }
 }

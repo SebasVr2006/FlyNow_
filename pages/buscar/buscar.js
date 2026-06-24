@@ -82,5 +82,5 @@ form.addEventListener('submit', (e) => {
         localStorage.setItem('clase', clase)
     }
 
-    if (esValido) window.location.href = "pages/Vuelos/buscar.html";
+    if (esValido) window.location.href = "../Vuelos/buscar.html";
 });

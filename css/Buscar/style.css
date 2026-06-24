@@ -92,8 +92,6 @@ main {
 }
 
 .equipaje {
-    display: flex;
-    flex-direction: column;
     background-color: #ffffff;
     border-radius: 0.75rem;
     border: 0.1vh solid rgb(219, 219, 219);
@@ -223,4 +221,63 @@ main {
     font-size: 0.95rem;
     font-weight: 600;
     color: #1e293b;
+}
+
+@media (max-width: 68.75rem) {
+    .cuerpo {
+        grid-template-columns: 16rem 1fr;
+    }
+
+    .equipaje {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 51.25rem) {
+    main {
+        height: auto;
+    }
+
+    .cuerpo {
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        height: auto;
+    }
+
+    .vue {
+        flex-wrap: wrap;
+    }
+
+    .vue-boton {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 35rem) {
+    .vue {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .imagen-aerolinea,
+    .titulo-vue {
+        align-items: center;
+        text-align: center;
+    }
+
+    .vue-boton button {
+        width: 100%;
+    }
+
+    .vue>div:last-child {
+        text-align: center;
+    }
 }

@@ -1,57 +1,100 @@
-main {
-    height: 57vh;
+.inicio {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 5%;
 }
 
-.subtitulo h1 {
+
+.inicio h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+}
+
+.imagen_home {
+    border-radius: 10px;
+}
+
+
+.razones {
+    display: flex;
+    gap: 20px;
+}
+
+.por-que-elegiros {
+    display: flex;
+    align-items: center;
+    padding: 5%;
+
+}
+
+.por-que-elegirnos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
-    font-size: 180%;
-    padding-right: 1%;
 }
 
+.icon {
+    width: 30px;
+    height: 30px;
+    color: rgb(1, 1, 141);
+}
 
-.busqueda {
+.contenedor_iconos {
+    width: 60px;
+    height: 60px;
+    background-color: #e7eefb;
+    border-radius: 50%;
+
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-    gap: 0.4rem;
+    align-items: center;
+
 }
 
-label {
-    justify-content: flex-start;
-    font-size: 120%;
-    font-weight: bold;
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
 }
 
-input,
-select {
-    box-sizing: border-box;
+.texto-home,
+.imagen_home {
+    flex: 1;
+}
+
+.imagen_home img,
+img.imagen_home {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: border-color 0.2s;
-}
-
-input:focus,
-select:focus {
-    border-color: rgb(1, 1, 141);
-    outline: none;
-}
-
-.botones {
-    padding-top: 1vh;
-}
-
-.error {
-    grid-column: 2;
-    font-size: 0.85rem;
-    display: none;
-    color: red;
-}
-
-.error.visible {
+    max-width: 34rem;
+    height: auto;
     display: block;
+}
+
+@media (max-width: 56.25rem) {
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding-top: 28rem;
+    }
+
+    .por-que-elegirnos {
+        width: 60vw;
+
+    }
+
+    .inicio h1 {
+        font-size: 2.2rem;
+    }
+
+    .razones {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 1rem;
+    }
 }

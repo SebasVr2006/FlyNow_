@@ -199,3 +199,64 @@ main h2 {
 .confirmar-reserva:hover {
     background-color: #000066;
 }
+
+@media (max-width: 52.5rem) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .DetalleDeVuelo,
+    .container-asientos {
+        width: 90%;
+    }
+
+    .container-asientos {
+        height: auto;
+    }
+
+    .Asientos {
+        width: 100%;
+        height: auto;
+        min-height: 18rem;
+    }
+}
+
+@media (max-width: 35rem) {
+    main h2 {
+        padding: 1rem 1rem 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .DetalleDeVuelo,
+    .container-asientos {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .estado-asientos {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .ejemplo {
+        margin-left: 0;
+    }
+
+    .Asientos {
+        grid-template-columns: 1fr 1.5rem 1fr;
+        gap: 0.25rem;
+        padding-top: 1.5rem;
+    }
+
+    .columna01,
+    .columna02 {
+        gap: 0.2rem;
+    }
+
+    .item-asiento img {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}

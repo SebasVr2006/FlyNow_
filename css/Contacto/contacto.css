@@ -80,3 +80,49 @@ input:focus {
     border-color: rgb(1, 1, 141);
     outline: none;
 }
+
+@media (max-width: 52.5rem) {
+    body {
+        width: 90%;
+    }
+    
+    .formu {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .eti,
+    .etimsj {
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-top: 0.75rem;
+    }
+
+    .camp,
+    .texto,
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .botones {
+        grid-column: auto;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 35rem) {
+    .contactanos {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .boton {
+        width: 100%;
+    }
+}
