@@ -16,8 +16,12 @@ function filtrarResultados() {
     // Se buscan los elementos check-aeroline, se corrobora que estén checkeados y luego con el map se devuelve el valor de cada uno.
     const aerolineaSeleccionada = [...document.querySelectorAll('.check-aerolinea:checked')].map(e => e.value);
 
+    const precioMaximo = parseInt(document.querySelector('#filtro-precio')?.value) ?? 5000;
+
     return VUELOS.filter(vuelo => {
         const coincidenciaRuta = vuelo.origen.toLowerCase() === origen.toLowerCase() && vuelo.destino.toLowerCase() === destino.toLowerCase();
+
+        const filtroPrecio = vuelo.precio <= precioMaximo;
 
         let pasaFiltro = true;
         if (tipoDeVuelo === 'directo') {
@@ -34,7 +38,7 @@ function filtrarResultados() {
                 pasaFiltro = false;
             }
         }
-        
+
         if (tipoDeVuelo === 'todos') pasaFiltro = true;
 
         let coincideAerolinea = true;
@@ -42,7 +46,7 @@ function filtrarResultados() {
             coincideAerolinea = aerolineaSeleccionada.includes(vuelo.aerolinea)
         }
 
-        return coincidenciaRuta && pasaFiltro && coincideAerolinea;
+        return coincidenciaRuta && pasaFiltro && coincideAerolinea && filtroPrecio;
     });
 }
 
@@ -104,7 +108,23 @@ function seleccionarVuelo(vuelo, div) {
     window.location.href = "../Detalle de Vuelo/DetalleDeVuelo.html";
 }
 
+function inicializarFiltroPrecio() {
+    const selectorRange = document.querySelector('#filtro-precio');
+    const textoValorMax = document.querySelector('#valor-precio-max');
+
+    if (!selectorRange || !textoValorMax) return;
+
+    selectorRange.addEventListener('input', (e) => {
+        const valorActual = parseInt(e.target.value);
+
+        textoValorMax.textContent = valorActual;
+
+        mostrarResultados();
+    })
+}
+
 document.querySelectorAll('input[name=tipo], .check-aerolinea').forEach(input => input.addEventListener('change', mostrarResultados));
 
-
-mostrarResultados();
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarResultados(); inicializarFiltroPrecio();
+});

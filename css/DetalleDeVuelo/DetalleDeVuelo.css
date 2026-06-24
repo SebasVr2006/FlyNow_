@@ -182,6 +182,10 @@ main h2 {
     filter: brightness(0) invert(22%) sepia(74%) saturate(7462%) hue-rotate(356deg) brightness(105%) contrast(119%);
 }
 
+.ocupado-permanente {
+    filter: brightness(0) invert(22%) sepia(74%) saturate(7462%) hue-rotate(356deg) brightness(105%) contrast(119%);
+}
+
 .confirmar-reserva {
     display: block;
     margin: 1.5rem auto 0;

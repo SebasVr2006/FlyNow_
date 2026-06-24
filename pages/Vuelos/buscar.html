@@ -25,7 +25,6 @@
                 <li class="activo"><a href="../Vuelos/vuelos.html">Vuelos</a></li>
                 <li><a href="../Ofertas/ofertas.html">Ofertas</a></li>
                 <li><a href="../Contacto/Index.html">Contacto</a></li>
-                <li><a href="../Perfil/info.html">Perfil</a></li>
                 <li><a href="../Login/login.html"><img src="../../assets/Iconos/cuentaB.svg" alt=""></a>
                 </li>
             </ul>
@@ -41,7 +40,8 @@
             <div class="porprecio">
                 <h4>Precio:</h4>
                 <label for="precio">Precio: </label>
-                <input type="range" min="0" max="10000" id="precio" name="precio">
+                <input type="range" min="0" max="5000" step="1000" id="filtro-precio" name="precio">
+                <p>Precio máximo: USD <span id="valor-precio-max">3000</span></p>
             </div>
 
             <div class="tipovuelo">

@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
         destino: JSON.parse(localStorage.getItem('vueloDestino')),
         fechaInicio: localStorage.getItem('fechaIda'),
         fechaFin: localStorage.getItem('fechaVuelta'),
-        precioBase: localStorage.getItem('vueloPrecio'),
+        precioBase: localStorage.getItem('precioFinal'),
     };
+
+
 
     let totalActual = datosVuelo.precioBase;
     let cuponAplicado = false;
@@ -117,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Si pasa todas las validaciones
         alert(`¡Reserva confirmada con éxito!\n\nPasajero: ${nombre}\nDNI: ${dni}\nTotal pagado: $${totalActual} USD\nMétodo: ${pagoSeleccionado}`);
-        window.location.href="./reservas.html"
+        window.location.href = "./reservas.html"
     });
 
 

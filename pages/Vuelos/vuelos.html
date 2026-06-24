@@ -25,7 +25,6 @@
                 <li class="activo"><a href="../Vuelos/vuelos.html">Vuelos</a></li>
                 <li><a href="../Ofertas/ofertas.html">Ofertas</a></li>
                 <li><a href="../Contacto/Index.html">Contacto</a></li>
-                <li><a href="../Perfil/info.html">Perfil</a></li>
                 <li><a href="../Login/login.html"><img src="../../assets/Iconos/cuentaB.svg" alt=""></a>
                 </li>
             </ul>
@@ -43,21 +42,25 @@
                 <div class="porprecio">
                     <h4>Precio:</h4>
                     <label for="precio">Precio: </label>
-                    <input type="range" min="8" max="2500" id="precio" name="precio">
+                    <input type="range" min="0" max="5000" step="1000" id="filtro-precio" name="precio">
+                    <p>Precio máximo: USD <span id="valor-precio-max">3000</span></p>
                 </div>
 
                 <div class="tipovuelo">
                     <h4>Tipo de vuelo:</h4>
-                    <label for="tipo"><input type="radio" name="tipo">Directo</label>
-                    <label for="tipo"><input type="radio" name="tipo">Con Escala</label>
+                    <label for="tipo"><input type="radio" name="tipo" value="todos" checked>Todos</label>
+                    <label for="tipo"><input type="radio" name="tipo" value="directo">Directo</label>
+                    <label for="tipo"><input type="radio" name="tipo" value="escala">Con Escala</label>
                 </div>
 
                 <div class="aerolineas">
                     <h4>Aerolineas: </h4>
-                    <label for="aero"><input type="checkbox">Aerolineas Argentinas</label>
-                    <label for="aero"><input type="checkbox">LATAM</label>
-                    <label for="aero"><input type="checkbox">FlyBondi</label>
+                    <label for="aero"><input type="checkbox" class="check-aerolinea"
+                            value="Aerolineas Argentinas">Aerolineas Argentinas</label>
+                    <label for="aero"><input type="checkbox" class="check-aerolinea" value="LATAM">LATAM</label>
+                    <label for="aero"><input type="checkbox" class="check-aerolinea" value="FlyBondi">FlyBondi</label>
                 </div>
+                
             </div>
             <div class="titulo-paises">
                 <h2>Explora destinos alrededor del mundo</h2>

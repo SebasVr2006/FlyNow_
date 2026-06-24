@@ -11,20 +11,39 @@ const cantPasajeros = parseInt(localStorage.getItem('pasajeros'));
 
 function seleccionarAsiento() {
     const asientos = document.querySelectorAll('.item-asiento');
+
     asientos.forEach(asiento => {
 
-        asiento.classList.add('disponible')
+        if (!asiento.classList.contains('ocupado')) {
+            asiento.classList.add('disponible');
+        }
 
         asiento.addEventListener('click', () => {
 
-            if (asiento.classList.contains('ocupado')) {
+            if (asiento.classList.contains('ocupado-permanente')) {
                 alert('Asiento ocupado');
             }
 
-            if (asiento.classList.contains('disponible')) {
-                asiento.classList.remove('disponible')
-                asiento.classList.add('ocupado')
+            if (asiento.classList.contains('ocupado')) {
+                asiento.classList.remove('ocupado')
+                asiento.classList.add('disponible')
+                return;
             }
+
+            // Se crea una constante en la que se almacenan todos los asientos seleccionados por el usuario
+            const asientosSeleccionados = document.querySelectorAll('.item-asiento.ocupado').length;
+
+            // Si el usuario selecciona más asientos de los que debería, se muestra un error
+            if (asiento.classList.contains('disponible')) {
+                if (asientosSeleccionados >= cantPasajeros) {
+                    alert('Ya saleccionó todos los asientos permitidos')
+                    return;
+                }
+                asiento.classList.remove('disponible');
+                asiento.classList.add('ocupado');
+            }
+
+
         })
     })
 }
@@ -89,6 +108,7 @@ function generarInfo() {
 function guardarReserva() {
     // Se crea un array de reservas buscando reservas existentes o se crea un array vacio.
     const reservasGuardadas = JSON.parse(localStorage.getItem('reservas')) || [];
+    const precioFinalLS = localStorage.setItem('precioFinal', calcularPrecioTotal());
 
     const nuevaReserva = {
         origen: origen,
@@ -130,8 +150,8 @@ function guardarReserva() {
 }
 
 document.querySelector('.confirmar-reserva').addEventListener('click', guardarReserva);
-document.querySelector('#volver').addEventListener('click', function() {
-    window.location.href="../Vuelos/buscar.html"
+document.querySelector('#volver').addEventListener('click', function () {
+    window.location.href = "../Vuelos/buscar.html"
 });
 
 generarInfo(); seleccionarAsiento();

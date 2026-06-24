@@ -2,7 +2,6 @@ import { cuentasRegistradas } from "../Login/cuentas.js";
 
 const mailActivo = localStorage.getItem('usuarioLogueado');
 const todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios'));
-
 const usuario = todasLasCuentas.find(c => c.mail === mailActivo);
 
 function verificarSesion() {
