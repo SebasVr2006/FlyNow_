@@ -68,3 +68,34 @@ input:focus {
         padding: 0.5rem;
     }
 }
+
+@media (max-width: 640px) {
+    .login-form {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    input {
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    .boton {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .botones-container,
+    .registro-container {
+        width: 100%;
+    }
+
+    #ya-logueado p {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #ya-logueado button {
+        font-size: 1.1rem;
+    }
+}

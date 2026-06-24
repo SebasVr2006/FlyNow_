@@ -10,3 +10,16 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+@media (max-width: 560px) {
+    .titulopol {
+        text-align: center;
+    }
+
+    .textopol {
+        font-size: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 1.5;
+    }
+}

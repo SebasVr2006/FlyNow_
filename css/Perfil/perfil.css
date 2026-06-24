@@ -317,3 +317,70 @@ header {
     margin-top: 1.25rem;
     width: 100%;
 }
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .barra_perfil,
+    .contenido,
+    .tarjetas_checkout {
+        grid-column: 1;
+    }
+
+    .barra_perfil {
+        width: auto;
+        height: auto;
+        margin: 1rem;
+    }
+
+    .contenido {
+        padding: 0 1rem 1rem;
+    }
+
+    .tarjetas_checkout {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .texto_barra {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .texto_barra a,
+    .resaltado {
+        width: auto;
+    }
+
+    .datos_usuario_info {
+        padding: 0 1rem 1rem;
+    }
+
+    .datos_usuario_info strong,
+    .datos_usuario_info span {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla_historial {
+        overflow-x: auto;
+    }
+
+    .tabla_vuelos {
+        min-width: 38rem;
+    }
+
+    .cupon {
+        flex-direction: column;
+    }
+}

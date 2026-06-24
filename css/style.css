@@ -1,10 +1,11 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
+    box-sizing: border-box;
 }
 
 main {
-    height: 57vh;
+    height: auto;
     padding: 3rem 0;
     margin: 3rem;
     width: 90%;
@@ -150,15 +151,11 @@ a {
 
 footer {
     display: flex;
-    position: fixed;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 120%;
     background-color: white;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 .botones {
@@ -189,4 +186,116 @@ button {
 
 .seleccionado {
     background-color: rgba(50, 50, 50, 0.355);
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 94%;
+        margin: 2rem auto;
+        padding: 2rem 1rem;
+    }
+
+    header {
+        height: auto;
+        min-height: 6vh;
+        padding: 0.75rem 1rem;
+        gap: 1rem;
+    }
+
+    .menu {
+        margin-right: 0;
+    }
+
+    .option {
+        gap: 0.35rem;
+        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .option li a,
+    .activo a {
+        padding: 0.45rem 0.65rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .titulo {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .menu {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .option {
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .info,
+    .redes {
+        width: 100%;
+    }
+
+    .redes {
+        line-height: normal;
+        padding-top: 0;
+    }
+
+    .encabredes {
+        height: auto;
+    }
+
+    .redesbox {
+        margin-left: 0;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .iconored {
+        width: 2.2rem;
+    }
+
+    .botones {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 96%;
+        margin: 1rem auto;
+        padding: 1.25rem 0.75rem;
+        border-radius: 0.75rem;
+    }
+
+    .option {
+        gap: 0.25rem;
+    }
+
+    .option li a,
+    .activo a {
+        display: block;
+        padding: 0.4rem 0.55rem;
+        font-size: 0.82rem;
+    }
 }

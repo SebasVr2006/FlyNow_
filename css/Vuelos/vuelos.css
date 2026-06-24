@@ -142,3 +142,44 @@ footer {
     font-size: 1.8rem;
     color: black;
 }
+
+@media (max-width: 1200px) {
+    .conteiner-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .destinos {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .filtros {
+        margin: 1rem;
+    }
+
+    .conteiner-images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .titulo-paises>h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteiner-images {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen,
+    .img-pais {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .img-pais {
+        height: 13rem;
+    }
+}

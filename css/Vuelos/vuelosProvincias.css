@@ -128,3 +128,48 @@ footer {
 .info-titulo a {
     width: fit-content;
 }
+
+@media (max-width: 1100px) {
+    .conteiner {
+        grid-template-columns: 16rem 1fr;
+    }
+
+    .vuelo-provincias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 820px) {
+    .conteiner {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 560px) {
+    main {
+        min-height: auto;
+    }
+
+    .vuelo-provincias {
+        grid-template-columns: 1fr;
+    }
+
+    .info-titulo h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .info-vuelo,
+    .img-provincia {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .img-provincia {
+        height: 12rem;
+    }
+}

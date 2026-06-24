@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/Buscar/style.css">
-    <title>FlyNow - Busqueda</title>
+    <link rel="stylesheet" href="../../css/BuscarVuelo/buscarVuelo.css">
+    <title>FlyNow</title>
 </head>
 
 <body>
@@ -21,8 +21,8 @@
         <nav class="menu">
             <ul class="option">
                 <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../buscar/BusquedaVuelo.html">Buscar Vuelo</a></li>
-                <li class="activo"><a href="../Vuelos/vuelos.html">Vuelos</a></li>
+                <li class="activo"><a href="BusquedaVuelo.html">Buscar Vuelo</a></li>
+                <li><a href="../Vuelos/vuelos.html">Vuelos</a></li>
                 <li><a href="../Ofertas/ofertas.html">Ofertas</a></li>
                 <li><a href="../Contacto/Index.html">Contacto</a></li>
                 <li><a href="../Perfil/info.html">Perfil</a></li>
@@ -32,58 +32,49 @@
         </nav>
     </header>
 
-    <div class="cuerpo">
-        <section class="filtros">
-            <div class="subt">
-                <h2>Filtrar por:</h2>
+    <main>
+        <div class="subtitulo">
+            <h1>Buscá tu vuelo</h1>
+        </div>
+        <form class="busqueda" id="form-busqueda">
+
+            <label for="origen">Origen: </label>
+            <input id="origen" name="origen" type="text" placeholder="Origen">
+            <span class="error" id="error-origen">El origen es obligatorio</span>
+
+            <label for="destino">Destino: </label>
+            <input id="destino" name="destino" type="text" placeholder="Destino">
+            <span class="error" id="error-destino">El destino es obligatorio</span>
+            <span class="error" id="error-igual">El origen y destino no pueden ser iguales</span>
+
+            <label for="ida">Ida: </label>
+            <input type="date" name="ida" id="ida" min="2026-01-01" max="2027-05-01">
+            <span class="error" id="error-ida">La fecha de ida es obligatoria</span>
+
+            <label for="vuelta">Vuelta: </label>
+            <input type="date" name="vuelta" id="vuelta" min="2026-01-01" max="2027-05-01">
+            <span class="error" id="error-vuelta">La fecha de vuelta es obligatoria</span>
+
+            <label for="pasajeros">Pasajeros: </label>
+            <input type="number" min="1" id="pasajeros" name="pasajeros" placeholder="Nro. total de pasajeros">
+            <span class="error" id="error-pasajeros">Selecciona la cantidad de pasajeros</span>
+
+            <label for="clase">Clase: </label>
+
+            <select name="clase" id="clase">
+                <option value=""> --- Seleccionar --- </option>
+                <option value="turista">Turista</option>
+                <option value="primera">Primera</option>
+            </select>
+            <span class="error" id="error-clase">Eliga una clase</span>
+            <div class="botones">
+                <button class="boton" type="submit" id="btn-buscar">Buscar</button>
+                <button class="boton" type="reset">Cancelar</button>
             </div>
-
-            <div class="porprecio">
-                <h4>Precio:</h4>
-                <label for="precio">Precio: </label>
-                <input type="range" min="0" max="10000" id="precio" name="precio">
-            </div>
-
-            <div class="tipovuelo">
-                <h4>Tipo de vuelo:</h4>
-                <label for="tipo"><input type="radio" name="tipo" value="directo">Directo</label>
-                <label for="tipo"><input type="radio" name="tipo" value="escala">Con Escala</label>
-            </div>
-
-            <div class="aerolineas">
-                <h4>Aerolineas: </h4>
-                <label for="aero"><input type="checkbox" class="check-aerolinea"
-                        value="Aerolineas Argentinas">Aerolineas Argentinas</label>
-                <label for="aero"><input type="checkbox" class="check-aerolinea" value="LATAM">LATAM</label>
-                <label for="aero"><input type="checkbox" class="check-aerolinea" value="FlyBondi">FlyBondi</label>
-            </div>
-        </section>
-
-        <div class="vuelos"></div>
-
-        <section class="equipaje">
-            <h3>Equipaje</h3>
-            <div class="equipaje-detalle">
-                <h4>Límite de peso</h4>
-                <ul>
-                    <li>Equipaje de mano: hasta 8 kg</li>
-                    <li>Equipaje en bodega: hasta 23 kg</li>
-                </ul>
-
-                <h4>No permitido</h4>
-                <ul>
-                    <li>Líquidos mayores a 100 ml</li>
-                    <li>Objetos cortantes o punzantes</li>
-                    <li>Baterías de litio sueltas</li>
-                    <li>Sustancias inflamables</li>
-                </ul>
-            </div>
-            <a href="politicasEquipaje.html" class="pol">Políticas</a>
-            <p><span class="resaltar">Cancelación gratis</span> en las próximas 24 hs.</p>
-        </section>
-    </div>
+        </form>
 
 
+    </main>
     <footer class="extra">
         <div class="info">
             <h3 class="fly">FlyNow:</h3>
@@ -114,7 +105,7 @@
 
         </div>
     </footer>
-    <script type="module" src="../buscar/resultados.js"></script>
+    <script src="buscar.js"></script>
 </body>
 
 </html>
