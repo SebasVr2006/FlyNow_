@@ -3,7 +3,7 @@ import { cuentasRegistradas } from "./cuentas.js";
 const loginForm = document.querySelector('#login-form');
 
 const mailActivo = localStorage.getItem('usuarioLogueado');
-const todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios'));
+const todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios')) || cuentasRegistradas;
 
 const avisoLogueado = document.querySelector('#ya-logueado');
 
@@ -17,18 +17,17 @@ function verificarSesion() {
             avisoLogueado.style.display = 'flex';
             loginForm.style.display = 'none';
             document.querySelector('.botones-container').style.display = 'none';
+            window.location.href="../Perfil/info.html"
             return;
         }
     }
     avisoLogueado.style.display = 'none';
     loginForm.style.display = 'flex';
+
 }
 
 // Al cerrar sesión se elimina el localStorage
 document.querySelector('#btn-cerrar-sesion').addEventListener('click', () => {
-    const cuenta = cuentasRegistradas.find(c => c.mail === mailActivo);
-    if (cuenta) cuenta.logueado = false;
-
     localStorage.removeItem('usuarioLogueado')
     location.reload();
 });
@@ -40,7 +39,7 @@ loginForm.addEventListener('submit', (frm) => {
     const mail = document.querySelector('#E-Mail').value;
     const contrasena = document.querySelector('#contrasena').value;
 
-    const encontrarMail = cuentasRegistradas.find(cuenta => cuenta.mail === mail);
+    const encontrarMail = todasLasCuentas.find(cuenta => cuenta.mail === mail);
     let esValido = true;
 
     // Validacion del mail

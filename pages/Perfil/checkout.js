@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Si pasa todas las validaciones
         alert(`¡Reserva confirmada con éxito!\n\nPasajero: ${nombre}\nDNI: ${dni}\nTotal pagado: $${totalActual} USD\nMétodo: ${pagoSeleccionado}`);
+        window.location.href="./reservas.html"
     });
 
 

@@ -27,6 +27,10 @@ main {
     gap: 1rem;
 }
 
+.barra_perfil button {
+    margin-top: 17rem;
+}
+
 .contenido {
     grid-column: 2/3;
     padding-right: 1.5rem;
@@ -316,4 +320,9 @@ header {
 #btn_finalizar {
     margin-top: 1.25rem;
     width: 100%;
+}
+
+#btn-cerrar-sesion{
+    display: flex;
+    justify-content: center;
 }

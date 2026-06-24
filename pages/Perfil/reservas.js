@@ -28,7 +28,7 @@ function cargarReservas() {
                     <li><span>Hora de salida:</span> ${reserva.salida}</li>
                     <li><span>Hora de llegada:</span> ${reserva.llegada}</li>
                     ${reserva.lugarEscala ? `<li><span>Escala/s en:</span> ${reserva.lugarEscala}</li>` : ''}
-                    <li><span>Duración:</span> ${reserva.duracion}h</li>
+                    <li><span>Duración:</span> ${reserva.duracion}</li>
                     <li><span>Precio:</span> USD ${reserva.precio}</li>
                 </ul>
             </div>

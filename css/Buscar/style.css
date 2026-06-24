@@ -92,6 +92,8 @@ main {
 }
 
 .equipaje {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     border-radius: 0.75rem;
     border: 0.1vh solid rgb(219, 219, 219);

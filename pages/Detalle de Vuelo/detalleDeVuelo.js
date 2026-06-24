@@ -2,7 +2,7 @@ import { cuentasRegistradas } from "../Login/cuentas.js";
 
 const origen = JSON.parse(localStorage.getItem('vueloOrigen'));
 const destino = JSON.parse(localStorage.getItem('vueloDestino'));
-const precio = JSON.parse(localStorage.getItem('vueloPrecio'));
+const precio = parseInt(localStorage.getItem('vueloPrecio'));
 const duracion = JSON.parse(localStorage.getItem('vueloDuracion'));
 const salida = JSON.parse(localStorage.getItem('vueloSalida'));
 const llegada = JSON.parse(localStorage.getItem('vueloLlegada'));
@@ -30,11 +30,23 @@ function seleccionarAsiento() {
 }
 
 function calcularPrecioTotal() {
+    const equipaje = document.querySelector('input[name=equipaje]:checked')?.value;
+    let precioFinal = precio;
+
     if (cantPasajeros > 1) {
-        return precio * (cantPasajeros * 0.75)
-    } else {
-        return precio;
+        precioFinal = precioFinal * (cantPasajeros * 0.75)
     }
+    if (equipaje === 'equipajeDeMano') {
+        precioFinal += 5
+    } else if (equipaje === 'valija') {
+        precioFinal += 25
+    }
+    return precioFinal;
+}
+
+function actualizarPrecioEnPantalla() {
+    document.querySelector('.precio').textContent = `USD ${calcularPrecioTotal()}`;
+
 }
 
 function generarInfo() {
@@ -58,11 +70,20 @@ function generarInfo() {
                         </ul>
                     </div>
                 </div>
+                <div class="seleccion-equipaje">
+                    <label for="equipaje"><input type="radio" name="equipaje" value="equipajeDeMano">Equipaje de mano</label>
+                    <label for="equipaje"><input type="radio" name="equipaje" value="valija">Equipaje para despachar</label>
+                </div>
                 </div>
                 <div class="total">
                     <span>Total</span>
                     <span class="precio">USD ${calcularPrecioTotal()}</span>
                 </div>`;
+
+    // Cuando se selecciona un tipo de equipaje, se actualiza el precio. 
+    document.querySelectorAll('input[name="equipaje"]').forEach(input => {
+        input.addEventListener('change', actualizarPrecioEnPantalla);
+    });
 }
 
 function guardarReserva() {
@@ -109,5 +130,8 @@ function guardarReserva() {
 }
 
 document.querySelector('.confirmar-reserva').addEventListener('click', guardarReserva);
+document.querySelector('#volver').addEventListener('click', function() {
+    window.location.href="../Vuelos/buscar.html"
+});
 
 generarInfo(); seleccionarAsiento();

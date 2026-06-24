@@ -5,6 +5,12 @@ const todasLasCuentas = JSON.parse(localStorage.getItem('cuentasUsuarios'));
 
 const usuario = todasLasCuentas.find(c => c.mail === mailActivo);
 
+function verificarSesion() {
+    if (!mailActivo || !usuario) {
+        window.location.href="../Login/login.html"
+    }
+}
+
 function renderizarDatosDeUsuario() {
     const container = document.querySelector('.datos_usuario');
     container.innerHTML = '';
@@ -26,4 +32,9 @@ function renderizarDatosDeUsuario() {
             </ul>`;
 }
 
-renderizarDatosDeUsuario();
+document.querySelector('#btn-cerrar-sesion').addEventListener('click', () => {
+    localStorage.removeItem('usuarioLogueado')
+    location.reload();
+});
+
+verificarSesion(); renderizarDatosDeUsuario();

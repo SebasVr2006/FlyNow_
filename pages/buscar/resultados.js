@@ -6,6 +6,8 @@ const fechaIda = localStorage.getItem('fechaIda');
 const fechaVuelta = localStorage.getItem('fechaVuelta');
 const pasajeros = localStorage.getItem('pasajeros');
 const clase = localStorage.getItem('clase');
+const equipajeDeMano = document.querySelector('#equipajeDeMano');
+const valija = document.querySelector('#valija')
 
 function filtrarResultados() {
     // Se buscan todos los inputs que tengan de nombre "tipo", se verifica q estén checkeados y se devuelve su valor
@@ -17,10 +19,23 @@ function filtrarResultados() {
     return VUELOS.filter(vuelo => {
         const coincidenciaRuta = vuelo.origen.toLowerCase() === origen.toLowerCase() && vuelo.destino.toLowerCase() === destino.toLowerCase();
 
-        // Nombre erroneo, sería pasaFiltro
         let pasaFiltro = true;
-        if (tipoDeVuelo === 'directo') pasaFiltro = !vuelo.escalas;
-        if (tipoDeVuelo === 'escala') pasaFiltro = vuelo.escalas;
+        if (tipoDeVuelo === 'directo') {
+            if (!vuelo.escalas) {
+                pasaFiltro = true;
+            } else {
+                pasaFiltro = false;
+            }
+        }
+        if (tipoDeVuelo === 'escala') {
+            if (vuelo.escalas) {
+                pasaFiltro = true;
+            } else {
+                pasaFiltro = false;
+            }
+        }
+        
+        if (tipoDeVuelo === 'todos') pasaFiltro = true;
 
         let coincideAerolinea = true;
         if (aerolineaSeleccionada.length > 0) {

@@ -4,6 +4,17 @@
     grid-template-columns: 30% 70%;
 }
 
+.seleccion-equipaje {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .9rem;
+}
+
+#volver {
+    width: 5rem;
+    margin-left: 1.5rem;
+}
+
 .DetalleDeVuelo {
     background-color: #ffffff;
     border: 0.1vh solid rgb(219, 219, 219);

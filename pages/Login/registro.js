@@ -10,6 +10,8 @@ document.querySelector('#register-form').addEventListener('submit', (rgsrt) => {
     const confirmarContrasena = document.querySelector('#confirmar-contrasena').value;
     const DNI = parseInt(document.querySelector('#DNI').value);
 
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const encontrarMail = cuentasRegistradas.find(cuenta => cuenta.mail === mail);
     let esValido = true;
 
@@ -25,11 +27,15 @@ document.querySelector('#register-form').addEventListener('submit', (rgsrt) => {
         esValido = false;
         return;
 
+    } else if (!regexEmail.test(mail)) {
+        alert('Ingrese un email valido');
+        esValido = false;
+        return;
+        
     } else if (encontrarMail) {
         alert('Este mail ya está registrado');
         esValido = false;
         return;
-
     }
 
     //Validacion del DNI
@@ -50,7 +56,7 @@ document.querySelector('#register-form').addEventListener('submit', (rgsrt) => {
     }
 
     if (esValido) {
-        
+
         // Se crea una versión local del JS de cuentas en el cual se pueden agregar nuevas cuentas
         let cuentasActuales = JSON.parse(localStorage.getItem('cuentasUsuarios')) || cuentasRegistradas;
 
