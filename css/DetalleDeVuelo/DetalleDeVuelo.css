@@ -211,7 +211,7 @@ main h2 {
 
     .DetalleDeVuelo,
     .container-asientos {
-        width: 90%;
+        width: 80%;
     }
 
     .container-asientos {
@@ -219,7 +219,7 @@ main h2 {
     }
 
     .Asientos {
-        width: 100%;
+        width: 87%;
         height: auto;
         min-height: 18rem;
     }
@@ -234,8 +234,7 @@ main h2 {
 
     .DetalleDeVuelo,
     .container-asientos {
-        width: 100%;
-        margin: 1rem auto;
+        width: 90%;
         padding: 1rem;
     }
 

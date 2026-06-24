@@ -205,19 +205,6 @@ footer {
     font-size: 1rem;
     color: black;
 }
-
-@media (max-width: 68.75rem) {
-    .container {
-        grid-template-columns: 16rem 1fr;
-    }
-
-    .cards-ofertas {
-        grid-template-columns: repeat(2, minmax(0, auto));
-        gap: 2rem;
-        padding-right: 0;
-    }
-}
-
 @media (max-width: 51.25rem) {
     .container {
         grid-template-columns: 1fr;
@@ -230,7 +217,7 @@ footer {
     .cards-ofertas {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
-        padding: 0 1rem;
+        padding: 0 5rem;
     }
 }
 

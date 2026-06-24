@@ -322,20 +322,21 @@ header {
     width: 100%;
 }
 
-#btn-cerrar-sesion{
+#btn-cerrar-sesion {
     display: flex;
     justify-content: center;
 }
 
 @media (max-width: 50rem) {
+    .barra_perfil button {
+        margin-top: 16rem;
+    }
+
     main {
         grid-template-columns: 1fr;
         gap: 0;
         height: fit-content;
-    }
-
-    footer {
-        display: none;
+        width: 91%;
     }
 
     .barra_perfil,
@@ -345,12 +346,13 @@ header {
     }
 
     .barra_perfil {
-        width: 90%;
-        margin: 1rem;
+        margin-left: 1.5rem;
+        width: 87%;
     }
 
     .contenido {
-        padding: 0 1rem 1rem;
+        padding: 0 1rem 1rem 1rem;
+        width: 90%;
     }
 
     .tarjetas_checkout {
@@ -387,10 +389,6 @@ header {
 
     .tabla_historial {
         overflow-x: auto;
-    }
-
-    .tabla_vuelos {
-        min-width: 38rem;
     }
 
     .cupon {

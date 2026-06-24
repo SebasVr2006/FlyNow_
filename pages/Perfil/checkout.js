@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cuponAplicado = true;
 
             alert("¡Cupón del 10% aplicado con éxito!");
-            actualizarInterfazTotal(); // Consigna 6 en acción
+            actualizarInterfazTotal();
         } else if (codigo === "") {
             alert("Por favor, ingresa un código de cupón.");
         } else {

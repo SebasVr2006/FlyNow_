@@ -76,6 +76,10 @@ input:focus {
         padding: 1rem;
     }
 
+    footer {
+        position: static;
+    }
+
     input {
         width: 100%;
         max-width: 30rem;

@@ -231,6 +231,10 @@ main {
     .equipaje {
         grid-column: 1 / -1;
     }
+
+    .extra {
+        position: static;
+    }
 }
 
 @media (max-width: 51.25rem) {
