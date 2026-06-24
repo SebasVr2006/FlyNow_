@@ -8,6 +8,7 @@ const salida = JSON.parse(localStorage.getItem('vueloSalida'));
 const llegada = JSON.parse(localStorage.getItem('vueloLlegada'));
 const lugarEscala = JSON.parse(localStorage.getItem('escalaLugar'));
 const cantPasajeros = parseInt(localStorage.getItem('pasajeros'));
+const clase = localStorage.getItem('clase');
 
 function seleccionarAsiento() {
     const asientos = document.querySelectorAll('.item-asiento');
@@ -52,14 +53,22 @@ function calcularPrecioTotal() {
     const equipaje = document.querySelector('input[name=equipaje]:checked')?.value;
     let precioFinal = precio;
 
+    if (clase === 'Primera Clase' || clase === 'primera') {
+        precioFinal = precioFinal * 2;
+    }
+
+
     if (cantPasajeros > 1) {
         precioFinal = precioFinal * (cantPasajeros * 0.75)
     }
+
     if (equipaje === 'equipajeDeMano') {
         precioFinal += 5
     } else if (equipaje === 'valija') {
         precioFinal += 25
     }
+
+
     return precioFinal;
 }
 
